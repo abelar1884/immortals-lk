@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immortal.ws</title>
+    <link rel="stylesheet" href="css/app.min.css">
+    <script src="js/app.min.js"></script>
+</head>
+
+<body>
+<nav class="pc-navigation">
+    <div class="inner-top">
+        <div class="flex">
+            <div class="left-fx">
+                <a href="/" class="logo"></a>
+                <div class="status">
+                    <div class="ico on"></div>
+                    <div class="online">
+                        <span>онлайн</span>
+                        <p>3511</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-fx">
+                <ul class="menu">
+                    <li><a href="https://immortals.ws/">ГЛАВНАЯ</a></li>
+                    <li><a href="https://immortals.ws/about_game">ОБ ИГРЕ</a></li>
+                    <li class="children">
+                        <a href="#">СООБЩЕСТВА</a>
+                        <ul class="sub">
+                            <li><a href="https://vk.com/immortals_boi">VKONTAKTE</a></li>
+                            <li><a href="https://discord.com/invite/xF2E8rsvMh">DISCORD</a></li>
+                            <li><a href="https://immortals.ws/forum/index.php">ФОРУМ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">НОВОСТИ</a></li>
+                    <li><a href="https://immortals.ws/forum/index.php?forums/akcii-i-meroprijatija.7/">АКЦИИ И МЕРОПРИЯТИЯ</a></li>
+                </ul>
+                <a href="#" class="link-load">
+                    <img src="images/icons/download.png" alt="">
+                    <span>скачать клиент ( 1.39 GB )</span>
+                </a>
+            </div>
+            <div class="navi-button" onclick="toggleNavi();"><span></span></div>
+        </div>
+    </div>
+</nav>
+<div class="mobile-navigation">
+    <button class="btn btn-mobile-nav-close" onclick="toggleNavi();"></button>
+    <div class="inner">
+        <ul class="menu" data-menu-children="">
+            <li><a href="https://immortals.ws/">ГЛАВНАЯ</a></li>
+            <li><a href="https://immortals.ws/about_game">ОБ ИГРЕ</a></li>
+            <li class="children">
+                <a href="#">СООБЩЕСТВА</a>
+                <ul class="sub">
+                    <li><a href="https://vk.com/immortals_boi">VKONTAKTE</a></li>
+                    <li><a href="https://discord.com/invite/xF2E8rsvMh">DISCORD</a></li>
+                    <li><a href="https://immortals.ws/forum/index.php">ФОРУМ</a></li>
+                </ul>
+            </li>
+            <li><a href="https://immortals.ws//sign-up">СОЗДАТЬ АККАУНТ</a></li>
+            <li><a onclick="showModal('#modal-files');" class="active">СКАЧАТЬ ФАЙЛЫ</a></li>
+            <li><a href="https://immortals.ws//donations/arda.345">ПОПОЛНИТЬ СЧЕТ</a></li>
+            <li><a href="https://immortals.ws//rating/arda.345">РЕЙТИНГ ИГРОКОВ</a></li>
+            <li><a href="https://immortals.ws//sign-in">ЛИЧНЫЙ КАБИНЕТ</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">НОВОСТИ</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?forums/akcii-i-meroprijatija.7/">АКЦИИ И МЕРОПРИЯТИЯ</a></li>
+        </ul>
+        <ul class="links">
+            <li><a href="#"><span>скачать клиент ( 1.39 GB )</span></a></li>
+            <li><a href="#"><span>info@arcana.su</span></a></li>
+        </ul>
+    </div>
+</div>
+
+<main class="main">
+    <div class="main-grid">
+        <div class="main-grid__col">
+            <div class="menu">
+                <div class="menu__btn" onclick="toggleSideBar()">
+                    <div class="menu__btn-line"></div>
+                    <div class="menu__btn-line"></div>
+                    <div class="menu__btn-line"></div>
+                </div>
+            </div>
+            <div class="side-menu">
+                <button class="btn btn-close btn-close_side-menu" onclick="toggleSideBar()"></button>
+                <div class="side-menu__avatar">
+                    <div class="side-menu__img mb_1" style="background-image: url(images/avatar.png)" ></div>
+                    <div class="side-menu__login">
+                        Abelar
+                    </div>
+                    <div class="side-menu__balance">
+                        Баланс: 100 ZEN
+                    </div>
+                </div>
+                <ul class="side-menu__list">
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-1"></div>
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-2"></div>
+                            Аккаунты
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-3"></div>
+                            Пожертвования
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-4"></div>
+                            Бонусные коды
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-5"></div>
+                            Поддержка
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-6"></div>
+                            Настройки
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-7"></div>
+                            Выход
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-grid__col">
+            <div class="page-title mb_2">
+                <img src="images/icons/support-page-title.png" alt="">
+                <div>
+                    поддержка
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb__item">
+                            <a href="#">Главная</a>
+                        </li>
+                        <li class="breadcrumb__item">
+                            <a href="#">Поддержка</a>
+                        </li>
+                        <li class="breadcrumb__item">Чат</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content chat_content">
+                <div class="index-grid">
+                    <div class="chat__wrapper">
+                        <h4 class="subtitle chat-bg">
+                            Чат поддержки
+                        </h4>
+                        <div class="chat bg1">
+                            <div class="chat__header">
+                                <div class="chat__title">
+                                    Не могу зайти на сервер
+                                </div>
+                            </div>
+                            <div class="chat__messages-container">
+                                <div class="chat__message-container-inner">
+                                    <div class="chat__message-line chat_message-right">
+                                        <div class="chat__message">
+                                            <div class="chat__img-container chat_img-responsible">
+                                                <div class="chat__img" style="background-image: url(images/avatar.png)"></div>
+                                            </div>
+                                            <div class="chat__date">
+                                                15:00
+                                            </div>
+                                            <div class="chat__name">
+                                                Abelar
+                                            </div>
+                                            <div class="chat__message-text">
+                                                <div class="chat__text">
+                                                    <div class="chat__text-control">
+                                                        <button class="btn btn_icon" title="Редактиировать">
+                                                            <img src="images/icons/edit.svg" >
+                                                        </button>
+                                                        <button class="btn btn_icon" title="Удалить">
+                                                            <img src="images/icons/trash.svg" >
+                                                        </button>
+                                                    </div>
+                                                    <div class="chat__image-wrapper">
+                                                        <div class="progress__wrapper">
+                                                            <span class="label">14%</span>
+                                                            <div class="progress">
+                                                                <div class="progress__bar" style="width: 14%"></div>
+                                                            </div>
+                                                        </div>
+                                                        <img src="https://andreyex.ru/wp-content/uploads/2023/08/Google-Inc.webp">
+                                                    </div>
+                                                    ДобрыйденьПроверьтеданныеДобрыйденьПроверьтеданныедлявходадлявДобрыйденьПроверьтеданныедлявходаходаДобрыйденьПроверьтеданныедлявходаДобрыйденьПроверьтеданныедлявхода
+                                                </div>
+                                                <div class="chat__text chat__text_only-image">
+                                                    <div class="chat__text-control">
+                                                        <button class="btn btn_icon" title="Редактиировать">
+                                                            <img src="images/icons/edit.svg" >
+                                                        </button>
+                                                        <button class="btn btn_icon" title="Удалить">
+                                                            <img src="images/icons/trash.svg" >
+                                                        </button>
+                                                    </div>
+                                                    <div class="chat__image-wrapper">
+                                                        <div class="progress__wrapper">
+                                                            <span class="label">14%</span>
+                                                            <div class="progress">
+                                                                <div class="progress__bar" style="width: 14%"></div>
+                                                            </div>
+                                                        </div>
+                                                        <img src="https://andreyex.ru/wp-content/uploads/2023/08/Google-Inc.webp">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat__message-line chat_message-left">
+                                        <div class="chat__message">
+                                            <div class="chat__img-container chat_img-responsible">
+                                                <div class="chat__img" style="background-image: url(images/avatar.png)"></div>
+                                            </div>
+                                            <div class="chat__date">
+                                                15:00
+                                            </div>
+                                            <div class="chat__name">
+                                                Abelar
+                                            </div>
+                                            <div class="chat__message-text">
+                                                <div class="chat__text">
+                                                    <div class="chat__text-control">
+                                                        <button class="btn btn_icon" title="Редактиировать">
+                                                            <img src="images/icons/edit.svg" >
+                                                        </button>
+                                                        <button class="btn btn_icon" title="Удалить">
+                                                            <img src="images/icons/trash.svg" >
+                                                        </button>
+                                                    </div>
+                                                    Добрый день! Проверьте данные для входа.
+                                                </div>
+                                                <div class="chat__text">
+                                                    Добрый день! Проверьте данные для входа.
+                                                </div>
+                                                <div class="chat__text">
+                                                    Добрый день! Проверьте данные для входа.
+                                                </div>
+                                                <div class="chat__text">
+                                                    Добрый день! Проверьте данные для входа.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat__message-line chat_message-left">
+                                        <div class="chat__message">
+                                            <div class="chat__img-container chat_img-responsible">
+                                                <div class="chat__img" style="background-image: url(images/avatar.png)"></div>
+                                            </div>
+                                            <div class="chat__date">
+                                                15:00
+                                            </div>
+                                            <div class="chat__name">
+                                                Abelar
+                                            </div>
+                                            <div class="chat__message-text">
+                                                <div class="chat__text">
+                                                    <div class="chat__text-control">
+                                                        <button class="btn btn_icon" title="Редактиировать">
+                                                            <img src="images/icons/edit.svg" >
+                                                        </button>
+                                                        <button class="btn btn_icon" title="Удалить">
+                                                            <img src="images/icons/trash.svg" >
+                                                        </button>
+                                                    </div>
+                                                    Добрый день! Проверьте данные для входа.
+                                                </div>
+                                                <div class="chat__text">
+                                                    <div class="chat__text-control">
+                                                        <button class="btn btn_icon" title="Редактиировать">
+                                                            <img src="images/icons/edit.svg" >
+                                                        </button>
+                                                        <button class="btn btn_icon" title="Удалить">
+                                                            <img src="images/icons/trash.svg" >
+                                                        </button>
+                                                    </div>
+                                                    Добрый день! Проверьте данные для входа.
+                                                </div>
+                                                <div class="chat__text">
+                                                    <div class="chat__text-control">
+                                                        <button class="btn btn_icon" title="Редактиировать">
+                                                            <img src="images/icons/edit.svg" >
+                                                        </button>
+                                                        <button class="btn btn_icon" title="Удалить">
+                                                            <img src="images/icons/trash.svg" >
+                                                        </button>
+                                                    </div>
+                                                    Добрыйдень!Проверьтеданныедлявхода.
+                                                </div>
+                                                <div class="chat__text">
+                                                    <div class="chat__text-control">
+                                                        <button class="btn btn_icon" title="Редактиировать">
+                                                            <img src="images/icons/edit.svg" >
+                                                        </button>
+                                                        <button class="btn btn_icon" title="Удалить">
+                                                            <img src="images/icons/trash.svg" >
+                                                        </button>
+                                                    </div>
+                                                    Добрый день! Проверьте данные для входа.
+                                                </div>
+                                                <div class="chat__text">
+                                                    <div class="chat__text-control">
+                                                        <button class="btn btn_icon" title="Редактиировать">
+                                                            <img src="images/icons/edit.svg" >
+                                                        </button>
+                                                        <button class="btn btn_icon" title="Удалить">
+                                                            <img src="images/icons/trash.svg" >
+                                                        </button>
+                                                    </div>
+                                                    Получили гражданство уже более 770 тыс., сообщил в воскресенье ТАСС депутат Госдумы от Ростовской области Виктор Водолацкий.
+
+                                                    «Общее количество написавших заявление — порядка 950 тыс. человек. Люди сейчас продолжают идти в миграционные службы и пишут заявления на получение гражданства РФ», — сказал Водолацкий.
+
+                                                    Он уточнил, что, по данным на 15 февраля, количество граждан России, проживающих на территории ДНР и ЛНР, составляет 775 тыс. 620 человек. Еще для 170 тыс. человек пока проходит процедура оформления гражданства.
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="chat__control">
+                                <div class="input__wrapper input__wrapper-chat">
+                                    <input class="input input_chat" placeholder="Введите текст сообщения...">
+                                    <div class="input__error-message">
+                                        Ошибка
+                                    </div>
+                                    <div class="chat__edit-message" hidden>
+                                        <div class="chat__edit-message-title mb_1">
+                                            Редактировать
+                                        </div>
+                                        <div class="chat__edit-message-text">
+                                            ОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписание Описание Описание Описание
+                                            Описание Описание Описание Описание Описание Описание
+                                            ОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписание Описание Описание Описание
+                                            Описание Описание Описание Описание Описание Описание
+                                            ОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписание Описание Описание Описание
+                                            Описание Описание Описание Описание Описание Описание
+                                            ОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписание Описание Описание Описание
+                                            Описание Описание Описание Описание Описание Описание
+                                        </div>
+                                        <button class="btn chat__edit-message-close">
+                                            <img src="images/icons/side-menu-close.png" >
+                                        </button>
+                                    </div>
+                                    <div class="chat__append-image">
+                                        <button class="btn chat__append-image-close">
+                                            <img src="images/icons/side-menu-close.png" >
+                                        </button>
+                                        <img src="https://andreyex.ru/wp-content/uploads/2023/08/Google-Inc.webp">
+                                    </div>
+                                </div>
+                                <div class="chat__bts-group">
+                                    <div class="template__wrapper">
+                                        <div class="template__list">
+                                            <div class="template__list-inner">
+                                                <div class="template__item template__item_hover">
+                                                    <div class="template__name">
+                                                        Скажи сыр
+                                                    </div>
+                                                    <div class="template__desc">
+                                                        Описание Описание Описание Описание Описание Описание
+                                                        Описание Описание Описание Описание Описание Описание
+                                                        Описание Описание Описание Описание Описание Описание
+                                                        Описание Описание Описание Описание Описание Описание
+                                                    </div>
+                                                </div>
+                                                <div class="template__item template__item_hover">
+                                                    <div class="template__name">
+                                                        Скажи сыр
+                                                    </div>
+                                                    <div class="template__desc">
+                                                        Описание Описание Описание Описание Описание Описание
+                                                        Описание Описание Описание Описание Описание Описание
+                                                        Описание Описание Описание Описание Описание Описание
+                                                        Описание Описание Описание Описание Описание Описание
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn ml_1" onclick="toggleModal('template')">Настройки</button>
+                                            </div>
+                                        </div>
+                                        <button class="btn ml_1 btn_icon" type="button">
+                                            <img src="images/icons/list.svg">
+                                        </button>
+                                    </div>
+                                    <button class="btn ml_1 btn_icon" type="button" onclick="onAppend()">
+                                        <img src="images/icons/paper-clip.svg" />
+                                    </button>
+                                    <button class="btn btn-simple-orange btn_disable ml_1">
+                                        Отправить
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-grid__col">
+           <div class="flex notify__group">
+               <div class="notify">
+                   <button class="btn btn-notify">
+                       <span class="btn-notify__have-notify"></span>
+                       <img src="images/icons/notify.png" alt="">
+                   </button>
+               </div>
+               <button class="btn">
+                   <img src="images/icons/settings.png" alt="">
+               </button>
+           </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="menu-menyu-v-podvale-container">
+        <ul id="menu-menyu-v-podvale" class="footer__navi">
+            <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">Новости</a></li>
+            <li><a href="https://immortals.ws/privacy_policy/">Политика конфиденциальности</a></li>
+            <li><a href="https://immortals.ws/terms_of_use/">Пользовательское соглашение</a></li>
+            <li><a href="https://immortals.ws/penalty/">Нарушения и наказания</a></li>
+            <li><a href="https://immortals.ws/forum/index.php">Форум</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?threads/instrukcija-po-obrascheniju-v-texnicheskuju-podderzhku.23/">Тех. Поддержка</a></li>
+        </ul>
+    </div>
+    <div class="footer__text">
+        Immortals.ws - Классический игровой проект, знаменитой онлайн игры Battle of the
+    </div>
+</footer>
+
+<div id="template" class="modal animate__animated">
+    <div class="modal__container modal_container-lg">
+        <button class="btn close-modal" onclick="toggleModal('template')"></button>
+        <h4 class="subtitle">
+            Шаблоны
+        </h4>
+        <div>
+            <div class="template__item">
+                <div class="template__name">
+                    Скажи сыр
+                </div>
+                <div class="template__desc">
+                    Описание Описание Описание Описание Описание Описание
+                    Описание Описание Описание Описание Описание Описание
+                    Описание Описание Описание Описание Описание Описание
+                    Описание Описание Описание Описание Описание Описание
+                </div>
+                <div class="template__control mt_1">
+                    <button class="btn">Редактировать</button>
+                    <button class="btn">Удалить</button>
+                </div>
+            </div>
+            <div class="template__item">
+                <div class="template__name">
+                    Скажи сыр
+                </div>
+                <div class="template__desc">
+                    Описание Описание Описание Описание Описание Описание
+                    Описание Описание Описание Описание Описание Описание
+                    Описание Описание Описание Описание Описание Описание
+                    Описание Описание Описание Описание Описание Описание
+                </div>
+            </div>
+            <div class="template__control mt_2 ml_1">
+                <button class="btn">Создать шаблон</button>
+            </div>
+        </div>
+        <form class="mt_2">
+            <div class="form-group">
+                <div class="form-group__label">Название</div>
+                <div class="form-group__value">
+                    <div class="input__wrapper">
+                        <input type="password" class="input" placeholder="Название шаблона">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group__label">Текст</div>
+                <div class="form-group__value">
+                    <div class="input__wrapper">
+                        <textarea rows="9" class="input" placeholder="Текст шаблона"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="template__form_control">
+                <button class="text-color-y1 btn ">Сохранить</button>
+                <button class="btn font-color-danger">Удалить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    const messageContainer = document.querySelector('.chat__message-container-inner')
+    const messageWrapper = document.querySelector('.chat__messages-container')
+    if (messageContainer.clientHeight < messageWrapper.clientHeight) messageContainer.classList.add('chat__message-bottom')
+    else messageWrapper.scrollTop = messageWrapper.scrollHeight;
+
+    function onAppend () {
+        const input = document.createElement('input')
+        input.type = 'file'
+        input.accept = '.jpeg, .png, .jpg, .mp4, .webm'
+        input.click()
+        input.onchange = function (event) {
+            console.log(event.target.files)
+        }
+    }
+</script>
+</body>
+</html>

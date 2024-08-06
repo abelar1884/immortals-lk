@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immortal.ws</title>
+    <link rel="stylesheet" href="css/app.min.css">
+    <script src="js/app.min.js"></script>
+</head>
+
+<body>
+<nav class="pc-navigation">
+    <div class="inner-top">
+        <div class="flex">
+            <div class="left-fx">
+                <a href="/" class="logo"></a>
+                <div class="status">
+                    <div class="ico on"></div>
+                    <div class="online">
+                        <span>онлайн</span>
+                        <p>3511</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-fx">
+                <ul class="menu">
+                    <li><a href="https://immortals.ws/">ГЛАВНАЯ</a></li>
+                    <li><a href="https://immortals.ws/about_game">ОБ ИГРЕ</a></li>
+                    <li class="children">
+                        <a href="#">СООБЩЕСТВА</a>
+                        <ul class="sub">
+                            <li><a href="https://vk.com/immortals_boi">VKONTAKTE</a></li>
+                            <li><a href="https://discord.com/invite/xF2E8rsvMh">DISCORD</a></li>
+                            <li><a href="https://immortals.ws/forum/index.php">ФОРУМ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">НОВОСТИ</a></li>
+                    <li><a href="https://immortals.ws/forum/index.php?forums/akcii-i-meroprijatija.7/">АКЦИИ И МЕРОПРИЯТИЯ</a></li>
+                </ul>
+                <a href="#" class="link-load">
+                    <img src="images/icons/download.png" alt="">
+                    <span>скачать клиент ( 1.39 GB )</span>
+                </a>
+            </div>
+            <div class="navi-button" onclick="toggleNavi();"><span></span></div>
+        </div>
+    </div>
+</nav>
+<div class="mobile-navigation">
+    <button class="btn btn-mobile-nav-close" onclick="toggleNavi();"></button>
+    <div class="inner">
+        <ul class="menu" data-menu-children="">
+            <li><a href="https://immortals.ws/">ГЛАВНАЯ</a></li>
+            <li><a href="https://immortals.ws/about_game">ОБ ИГРЕ</a></li>
+            <li class="children">
+                <a href="#">СООБЩЕСТВА</a>
+                <ul class="sub">
+                    <li><a href="https://vk.com/immortals_boi">VKONTAKTE</a></li>
+                    <li><a href="https://discord.com/invite/xF2E8rsvMh">DISCORD</a></li>
+                    <li><a href="https://immortals.ws/forum/index.php">ФОРУМ</a></li>
+                </ul>
+            </li>
+            <li><a href="https://immortals.ws//sign-up">СОЗДАТЬ АККАУНТ</a></li>
+            <li><a onclick="showModal('#modal-files');" class="active">СКАЧАТЬ ФАЙЛЫ</a></li>
+            <li><a href="https://immortals.ws//donations/arda.345">ПОПОЛНИТЬ СЧЕТ</a></li>
+            <li><a href="https://immortals.ws//rating/arda.345">РЕЙТИНГ ИГРОКОВ</a></li>
+            <li><a href="https://immortals.ws//sign-in">ЛИЧНЫЙ КАБИНЕТ</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">НОВОСТИ</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?forums/akcii-i-meroprijatija.7/">АКЦИИ И МЕРОПРИЯТИЯ</a></li>
+        </ul>
+        <ul class="links">
+            <li><a href="#"><span>скачать клиент ( 1.39 GB )</span></a></li>
+            <li><a href="#"><span>info@arcana.su</span></a></li>
+        </ul>
+    </div>
+</div>
+
+<main class="main">
+    <div class="main-grid">
+        <div class="main-grid__col">
+            <div class="menu">
+                <div class="menu__btn" onclick="toggleSideBar()">
+                    <div class="menu__btn-line"></div>
+                    <div class="menu__btn-line"></div>
+                    <div class="menu__btn-line"></div>
+                </div>
+            </div>
+            <div class="side-menu">
+                <button class="btn btn-close btn-close_side-menu" onclick="toggleSideBar()"></button>
+                <div class="side-menu__avatar">
+                    <div class="side-menu__img mb_1" style="background-image: url(images/avatar.png)" ></div>
+                    <div class="side-menu__login">
+                        Abelar
+                    </div>
+                    <div class="side-menu__balance">
+                        Баланс: 100 ZEN
+                    </div>
+                </div>
+                <ul class="side-menu__list">
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-1"></div>
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-2"></div>
+                            Аккаунты
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-3"></div>
+                            Пожертвования
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-4"></div>
+                            Бонусные коды
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-5"></div>
+                            Поддержка
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-6"></div>
+                            Настройки
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-7"></div>
+                            Выход
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-grid__col">
+            <div class="page-title mb_2">
+                <img src="images/icons/donations-page-title.png" alt="">
+                <div>
+                    пожертвования
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb__item">
+                            <a href="#">Главная</a>
+                        </li>
+                        <li class="breadcrumb__item">Пожертвования</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="index-grid">
+                    <div class="top-up">
+                        <h4 class="subtitle top-up-bg">
+                            Пополнить счет
+                        </h4>
+                        <div class="top-up__content">
+                            <form class="top-up__form">
+                                <div class="flex-grow-2">
+                                    <div class="form-group top-up_from-group">
+                                        <div class="form-group__label mr_1">
+                                            Сумма
+                                        </div>
+                                        <div class="form-group__value flex-grow-2">
+                                            <div class="input__wrapper">
+                                                <input class="input bg1 flex-grow-2" placeholder="Введите сумму" type="number" min="1" max="2">
+                                                <div class="input__error-message">
+                                                    Ошибка
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group top-up_from-group flex-grow-2">
+                                        <div class="form-group__label mr_1">
+                                            Платежный Сервис
+                                        </div>
+                                        <div class="select select_donation" id="select-3">
+                                            <button type="button" class="select__toggle" name="car" value="" data-select="toggle" data-index="-1">Выберите сервер</button>
+                                            <div class="select__dropdown">
+                                                <ul class="select__options">
+                                                    <li class="select__option" data-select="option" data-value="volkswagen" data-index="0">
+                                                        <img src="images/crown.png" class="mr_1">
+                                                        Pay 1
+                                                    </li>
+                                                    <li class="select__option" data-select="option" data-value="ford" data-index="1">
+                                                        Pay 2
+                                                    </li>
+                                                    <li class="select__option" data-select="option" data-value="toyota" data-index="2">
+                                                        Pay 3
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-orange ml_1">
+                                    <img src="images/icons/coin.png" alt="">
+                                    Пополнить
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="top-up-bonus">
+                        <h4 class="subtitle top-up-bonus-bg">
+                            Бонус при пополнении счета
+                        </h4>
+                        <div class="top-up-bonus__table">
+                            <div class="top-up-bonus__header">
+                                <div class="top-up-bonus__row">
+                                    <div class="top-up-bonus__col">Сумма:</div>
+                                    <div class="top-up-bonus__col">Бонус:</div>
+                                </div>
+                                <div class="top-up-bonus__row">
+                                    <div class="top-up-bonus__col">Сумма:</div>
+                                    <div class="top-up-bonus__col">Бонус:</div>
+                                </div>
+                            </div>
+                            <div class="top-up-bonus__content">
+                                <div class="top-up-bonus__row bg1">
+                                    <div class="top-up-bonus__col">1000 ₽</div>
+                                    <div class="top-up-bonus__col">1%</div>
+                                </div>
+                                <div class="top-up-bonus__row bg1">
+                                    <div class="top-up-bonus__col">20 000 ₽</div>
+                                    <div class="top-up-bonus__col">7%</div>
+                                </div>
+                                <div class="top-up-bonus__row bg1">
+                                    <div class="top-up-bonus__col">5000 ₽</div>
+                                    <div class="top-up-bonus__col">3%</div>
+                                </div>
+                                <div class="top-up-bonus__row bg1">
+                                    <div class="top-up-bonus__col">50 000 ₽</div>
+                                    <div class="top-up-bonus__col">10%</div>
+                                </div>
+                                <div class="top-up-bonus__row bg1">
+                                    <div class="top-up-bonus__col">10 000 ₽</div>
+                                    <div class="top-up-bonus__col">5%</div>
+                                </div>
+                                <div class="top-up-bonus__row">
+                                    <a href="" class="top-up-bonus_link flex">Подробнее о бонусах <img class="ml_1" src="images/icons/right-arrow.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="refill-history">
+                        <h4 class="subtitle refill-history-bg">
+                            История пополнения
+                        </h4>
+                        <div class="refill-history__content">
+                            <div class="refill-history__grid mb_2">
+                                <div class="table__wrapper">
+                                    <table class="table table_bg1 bids-support_table">
+                                        <thead>
+                                        <th>№:</th>
+                                        <th>Персонаж:</th>
+                                        <th>Уровень:</th>
+                                        <th>Професия:</th>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><div class="place">1</div></td>
+                                            <td>вася</td>
+                                            <td>23</td>
+                                            <td>Скалолаз</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="place">2</div></td>
+                                            <td>вася</td>
+                                            <td>23</td>
+                                            <td>Скалолаз</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="place">3</div></td>
+                                            <td>вася</td>
+                                            <td>23</td>
+                                            <td>Скалолаз</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="place">4</div></td>
+                                            <td>вася</td>
+                                            <td>23</td>
+                                            <td>Скалолаз</td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="place">5</div></td>
+                                            <td>вася</td>
+                                            <td>23</td>
+                                            <td>Скалолаз</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="table__loader hidden">
+                                        Загрузка
+                                        <div class="loader__wrapper">
+                                            <div class="loader"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination refill-history_pagination bg1">
+                                <ul class="pagination__container">
+                                    <li class="pagination__page"><a href="#" class="pagination__left-arrow"><img src="images/icons/left-arrow.png" alt=""></a></li>
+                                    <li class="pagination__page"><a href="#" class="pagination_page-active">1</a></li>
+                                    <li class="pagination__page"><a href="#">2</a></li>
+                                    <li class="pagination__page"><a href="#">3</a></li>
+                                    <li class="pagination__page"><a href="#">4</a></li>
+                                    <li class="pagination__page"><a href="#" class="pagination__right-arrow"><img src="images/icons/right-arrow.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-grid__col">
+           <div class="flex notify__group">
+               <div class="notify">
+                   <button class="btn btn-notify">
+                       <span class="btn-notify__have-notify"></span>
+                       <img src="images/icons/notify.png" alt="">
+                   </button>
+               </div>
+               <button class="btn">
+                   <img src="images/icons/settings.png" alt="">
+               </button>
+           </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="menu-menyu-v-podvale-container">
+        <ul id="menu-menyu-v-podvale" class="footer__navi">
+            <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">Новости</a></li>
+            <li><a href="https://immortals.ws/privacy_policy/">Политика конфиденциальности</a></li>
+            <li><a href="https://immortals.ws/terms_of_use/">Пользовательское соглашение</a></li>
+            <li><a href="https://immortals.ws/penalty/">Нарушения и наказания</a></li>
+            <li><a href="https://immortals.ws/forum/index.php">Форум</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?threads/instrukcija-po-obrascheniju-v-texnicheskuju-podderzhku.23/">Тех. Поддержка</a></li>
+        </ul>
+    </div>
+    <div class="footer__text">
+        Immortals.ws - Классический игровой проект, знаменитой онлайн игры Battle of the
+    </div>
+</footer>
+<script>
+    const select3 = new CustomSelect('#select-3')
+</script>
+</body>
+</html>

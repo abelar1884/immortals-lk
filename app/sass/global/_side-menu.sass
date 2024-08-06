@@ -1,0 +1,103 @@
+.side-menu
+  //max-height: 600px
+  height: calc(100% - 80px)
+  width: 230px
+  background-color: $bg1
+  color: white
+  border-radius: 10px
+  z-index: 11
+  top: 0
+  padding: 40px 0
+  position: relative
+
+.btn-close
+  width: 16px
+  height: 16px
+  background-image: url("../images/icons/side-menu-close.png")
+
+.btn-close_side-menu
+  position: absolute
+  right: 20px
+  top: 17px
+  display: none
+
+.side-menu__avatar
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.side-menu__img
+  width: 60px
+  height: 60px
+  background-size: contain
+  background-position: center
+  border-radius: 50%
+
+.side-menu__login
+  color: $y1
+  font-size: 15px
+
+.side-menu__balance
+  color: white
+  font-family: $ffgr
+  font-size: 12px
+
+.side-menu__list
+  padding: 0
+  list-style-type: none
+  li
+    padding: 10px 20px 10px 55px
+    transition: background-color .3s ease
+    &:hover
+      background-color: $bg2
+      a
+        color: white
+      .side-menu__list-icon
+        filter: saturate(300%)
+  a
+    color: $y1
+    font-size: 15px
+    position: relative
+    display: flex
+    &:hover
+      opacity: 1
+      color: white
+
+.side-menu__list-icon
+  width: 20px
+  height: 20px
+  background-position: center
+  background-repeat: no-repeat
+  margin-right: 10px
+  background-size: contain
+  position: absolute
+  left: -35px
+  top: 50%
+  transform: translateY(-50%)
+
+.side-menu_toggle
+  left: 0 !important
+
+@for $i from 1 through 11
+  .side-menu_icon-#{$i}
+    background-image: url('../images/icons/nav-ico-#{$i}.png')
+
+.side-menu_icon-1, .side-menu_icon-2
+  width: 25px
+  height: 25px
+
+
+@media (max-width: 1000px)
+  .side-menu
+    position: fixed
+    border-radius: 0
+    background-color: rgba(38,12,0, .95)
+    left: -230px
+    transition: left .3s ease
+    //display: none
+  .btn-close_side-menu
+    display: flex
+  .menu__btn
+    display: flex
+
+

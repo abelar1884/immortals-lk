@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immortal.ws</title>
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <script src="js/app.min.js"></script>
+    <link rel="shortcut icon" href="../app/images/favicon.png" type="image/png">
+</head>
+
+<body>
+
+<nav class="pc-navigation">
+    <div class="inner-top">
+        <div class="flex">
+            <div class="left-fx">
+                <a href="/" class="logo"></a>
+                <div class="status">
+                    <div class="ico on"></div>
+                    <div class="online">
+                        <span>онлайн</span>
+                        <p>3511</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-fx">
+                <ul class="menu">
+                    <li><a href="https://immortals.ws/">ГЛАВНАЯ</a></li>
+                    <li><a href="https://immortals.ws/about_game">ОБ ИГРЕ</a></li>
+                    <li class="children">
+                        <a href="#">СООБЩЕСТВА</a>
+                        <ul class="sub">
+                            <li><a href="https://vk.com/immortals_boi">VKONTAKTE</a></li>
+                            <li><a href="https://discord.com/invite/xF2E8rsvMh">DISCORD</a></li>
+                            <li><a href="https://immortals.ws/forum/index.php">ФОРУМ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">НОВОСТИ</a></li>
+                    <li><a href="https://immortals.ws/forum/index.php?forums/akcii-i-meroprijatija.7/">АКЦИИ И МЕРОПРИЯТИЯ</a></li>
+                </ul>
+                <a href="#" class="link-load">
+                    <img src="images/icons/download.png" alt="">
+                    <span>скачать клиент ( 1.39 GB )</span>
+                </a>
+            </div>
+            <div class="navi-button" onclick="toggleNavi();"><span></span></div>
+        </div>
+    </div>
+</nav>
+<div class="mobile-navigation">
+    <button class="btn btn-mobile-nav-close" onclick="toggleNavi();"></button>
+    <div class="inner">
+        <ul class="menu" data-menu-children="">
+            <li><a href="https://immortals.ws/">ГЛАВНАЯ</a></li>
+            <li><a href="https://immortals.ws/about_game">ОБ ИГРЕ</a></li>
+            <li class="children">
+                <a href="#">СООБЩЕСТВА</a>
+                <ul class="sub">
+                    <li><a href="https://vk.com/immortals_boi">VKONTAKTE</a></li>
+                    <li><a href="https://discord.com/invite/xF2E8rsvMh">DISCORD</a></li>
+                    <li><a href="https://immortals.ws/forum/index.php">ФОРУМ</a></li>
+                </ul>
+            </li>
+            <li><a href="https://immortals.ws//sign-up">СОЗДАТЬ АККАУНТ</a></li>
+            <li><a onclick="showModal('#modal-files');" class="active">СКАЧАТЬ ФАЙЛЫ</a></li>
+            <li><a href="https://immortals.ws//donations/arda.345">ПОПОЛНИТЬ СЧЕТ</a></li>
+            <li><a href="https://immortals.ws//rating/arda.345">РЕЙТИНГ ИГРОКОВ</a></li>
+            <li><a href="https://immortals.ws//sign-in">ЛИЧНЫЙ КАБИНЕТ</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">НОВОСТИ</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?forums/akcii-i-meroprijatija.7/">АКЦИИ И МЕРОПРИЯТИЯ</a></li>
+        </ul>
+        <ul class="links">
+            <li><a href="#"><span>скачать клиент ( 1.39 GB )</span></a></li>
+            <li><a href="#"><span>info@arcana.su</span></a></li>
+        </ul>
+    </div>
+</div>
+
+<main class="main">
+    <div class="main-grid">
+        <div class="main-grid__col">
+            <div class="menu">
+                <div class="menu__btn" onclick="toggleSideBar()">
+                    <div class="menu__btn-line"></div>
+                    <div class="menu__btn-line"></div>
+                    <div class="menu__btn-line"></div>
+                </div>
+            </div>
+            <div class="side-menu">
+                <button class="btn btn-close btn-close_side-menu" onclick="toggleSideBar()"></button>
+                <div class="side-menu__avatar">
+                    <div onclick="toggleModal('cropper')" class="side-menu__img mb_1" style="background-image: url(images/avatar.png)" ></div>
+                    <div class="side-menu__login">
+                        Abelar
+                    </div>
+                    <div class="side-menu__balance">
+                        Баланс: 100 ZEN
+                    </div>
+                </div>
+                <div class="select select_index-page select_server-list mt_2" id="select-3">
+                    <button type="button" class="select__toggle" name="car" value="" data-select="toggle" data-index="-1">Выберите сервер</button>
+                    <div class="select__dropdown">
+                        <ul class="select__options">
+                            <li class="select__option" data-select="option" data-value="volkswagen" data-index="0">
+                                <div class="place place-1 mr_1">
+                                </div>
+                                Аккаунт
+                            </li>
+                            <li class="select__option" data-select="option" data-value="ford" data-index="1">
+                                <div class="place place-2 mr_1">
+                                </div>
+                                Аккаунт
+                            </li>
+                            <li class="select__option" data-select="option" data-value="toyota" data-index="2">
+                                <div class="place place-3 mr_1">
+                                </div>
+                                Аккаунт
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="side-menu__list">
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-1"></div>
+                            Главная
+                        </a>
+                    </li>
+                    <li onclick="toggleModal('char-list')">
+                        <a>
+                            <div class="side-menu__list-icon side-menu_icon-2"></div>
+                            Аккаунты
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-3"></div>
+                            Пожертвования
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-4"></div>
+                            Бонусные коды
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-5"></div>
+                            Поддержка
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-6"></div>
+                            Настройки
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-9"></div>
+                            Рефералы
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-10"></div>
+                            Рулетка
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-7"></div>
+                            Выход
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-grid__col">
+            <div class="page-title mb_2">
+                <img src="images/icons/roulette-page-title.png" alt="">
+                <div>
+                    Рулетка
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb__item">
+                            <a href="#">Личный кабинет</a>
+                        </li>
+                        <li class="breadcrumb__item">Рулетка</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="index-grid">
+                    <div class="rolette__balance">
+                        Баланс: <span class="text-color-y1">1200 zen</span>
+                    </div>
+                    <div class="my-referal mt_4">
+                        <h4 class="subtitle subtitle_referal rolette-bg">
+                            Рулетка
+                        </h4>
+                        <div class="rolette__wrapper bg2 mb_1 mt_4">
+                            <div class="rolette__partition">
+                                <button class="rolette__left-arrow">
+                                    <img src="images/icons/left-rolette-arrow.png">
+                                </button>
+                                <div class="rolette__target"></div>
+                                <button class="rolette__right-arrow">
+                                    <img src="images/icons/right-rolette-arrow.png">
+                                </button>
+                            </div>
+                            <div class="rolette">
+                                <div class="rolette__window">
+                                    <div class="rolette__item">
+                                        <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                        Название предмета
+                                    </div>
+                                    <div class="rolette__item">
+                                        <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                        Название предмета
+                                    </div>
+                                    <div class="rolette__item">
+                                        <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                        Название предмета
+                                    </div>
+                                    <div class="rolette__item">
+                                        <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                        Название предмета
+                                    </div>
+                                    <div class="rolette__item">
+                                        <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                        Название предмета
+                                    </div>
+                                    <div class="rolette__item">
+                                        <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                        Название предмета
+                                    </div>
+                                    <div class="rolette__item">
+                                        <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                        Название предмета
+                                    </div>
+                                    <div class="rolette__item">
+                                        <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                        Название предмета
+                                    </div>
+                                    <div class="rolette__item">
+                                        <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                        Название предмета
+                                    </div>
+                                    <div class="rolette__item">
+                                        <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                        Название предмета
+                                    </div>
+                                    <div class="rolette__item">
+                                        <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                        Название предмета
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rolette__more mb_3">
+                            <a href="">
+                                Подробнее >
+                            </a>
+                        </div>
+                        <button id="start" class="btn btn-orange-long margin-auto">
+                            Крутить 149 ZEN
+                        </button>
+                    </div>
+                    <div class="my-referals mt_5">
+                        <h4 class="subtitle subtitle_referal what-you-win">
+                            Что можно выиграть?
+                        </h4>
+                        <div class="presents mb_4 mt_4">
+                            <div class="present__item ml_3 mr_3 mb_2">
+                                <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                Название предмета
+                            </div>
+                            <div class="present__item ml_3 mr_3 mb_2">
+                                <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                Название предмета
+                            </div>
+                            <div class="present__item ml_3 mr_3 mb_2">
+                                <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                Название предмета
+                            </div>
+                            <div class="present__item ml_3 mr_3 mb_2">
+                                <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                Название предмета
+                            </div>
+                            <div class="present__item ml_3 mr_3 mb_2">
+                                <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                Название предмета
+                            </div>
+                            <div class="present__item ml_3 mr_3 mb_2">
+                                <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                Название предмета
+                            </div>
+                            <div class="present__item ml_3 mr_3 mb_2">
+                                <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                Название предмета
+                            </div>
+                            <div class="present__item ml_3 mr_3 mb_2">
+                                <img class="shadow mb_1" src="images/item/item-1.jpg">
+                                Название предмета
+                            </div>
+                        </div>
+                        <button onclick="toggleModal('winnings')" class="btn btn-green margin-auto">
+                            <img src="images/icons/rolette-icon-btn.png">
+                            История выигрышей
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-grid__col">
+           <div class="flex notify__group">
+               <div class="notify">
+                   <button class="btn btn-notify" onclick="toggleNotify()">
+                       <span class="btn-notify__have-notify"></span>
+                       <img src="images/icons/notify.png" alt="">
+                   </button>
+               </div>
+               <button class="btn">
+                   <img src="images/icons/settings.png" alt="">
+               </button>
+           </div>
+        </div>
+    </div>
+    <div class="dropdown-notify animate__animated hidden">
+        <div class="dropdown-notify__item animate__animated">
+            <div>
+                <img src="images/icons/coin.png" alt="">
+            </div>
+            <div class="dropdown-notify__text">
+                <div class="dropdown-notify__title text-color-y1">УУУjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjсука</div>
+                <div class="dropdown-notify__desc">
+                    Это текст рыба, в этом тексте будет
+                    написано само уведомление.
+                </div>
+            </div>
+            <button class="btn btn-close close-notify" onclick="closeMessageNotify(this)"></button>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="menu-menyu-v-podvale-container">
+        <ul id="menu-menyu-v-podvale" class="footer__navi">
+            <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">Новости</a></li>
+            <li><a href="https://immortals.ws/privacy_policy/">Политика конфиденциальности</a></li>
+            <li><a href="https://immortals.ws/terms_of_use/">Пользовательское соглашение</a></li>
+            <li><a href="https://immortals.ws/penalty/">Нарушения и наказания</a></li>
+            <li><a href="https://immortals.ws/forum/index.php">Форум</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?threads/instrukcija-po-obrascheniju-v-texnicheskuju-podderzhku.23/">Тех. Поддержка</a></li>
+        </ul>
+    </div>
+    <div class="footer__text">
+        Immortals.ws - Классический игровой проект, знаменитой онлайн игры Battle of the
+    </div>
+</footer>
+
+<div id="winnings" class="modal animate__animated">
+    <div class="modal__container modal_container-rolette shadow">
+        <button class="btn close-modal" onclick="toggleModal('winnings')"></button>
+        <h4 class="subtitle subtitle_referal winnings-title-bg">
+            История ваших выигрышей
+        </h4>
+        <div class="table__wrapper">
+            <table class="table table_bg1 table_auto-place-number">
+                <thead>
+                <th>Предмет:</th>
+                <th>Дата выигрыша :</th>
+                <th>Стоимость: </th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="winnings__item ">
+                            <img class="shadow mr_2" src="images/item/item-1.jpg">
+                            Название предмета
+                        </div>
+                    </td>
+                    <td>
+                        12 дек. 2021 г., 18:00
+                    </td>
+                    <td>
+                        1200 ZEN
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="table__loader hidden">
+                Загрузка
+                <div class="loader__wrapper">
+                    <div class="loader"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

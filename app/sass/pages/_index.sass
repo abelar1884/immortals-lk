@@ -1,0 +1,308 @@
+.index-grid
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+  grid-template-rows: auto auto
+  grid-gap: 20px
+
+.index-bg
+  background-color: $bg-white
+  border-radius: 10px
+
+
+//***********************************************************************************************
+//  аватар
+//***********************************************************************************************
+
+.avatar
+  position: relative
+  height: 200px
+  grid-area: 1 / 1 / 1 / 3
+  &:before
+    content: ""
+    display: block
+    position: absolute
+    background-image: url("../images/avatar-bg.png")
+    width: 550px
+    height: 550px
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+.avatar-img
+  width: 147px
+  height: 147px
+  border-radius: 50%
+  background-size: contain
+  background-position: center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+
+//***********************************************************************************************
+//  быстрые дейсвтвия и выбор сервера
+//***********************************************************************************************
+
+.title-login
+  color: white
+  font-size: 22px
+  display: flex
+  align-items: center
+  justify-content: center
+  >span
+    display: block
+    margin: 0 10px
+  &:before, &:after
+    content: ""
+    display: block
+    height: 11px
+    width: 147px
+    margin-top: 5px
+  &:before
+    background-image: url("../images/titles/main/login-left.png")
+    background-position: right
+  &:after
+    background-image: url("../images/titles/main/login-right.png")
+
+.hot-actions
+  position: relative
+  z-index: 10
+  grid-area: 1 / 3 / 1 / 7
+
+.hot-actions__btn-group
+  display: flex
+  justify-content: space-between
+
+
+//***********************************************************************************************
+//  новости
+//***********************************************************************************************
+
+.news
+  grid-area: 2 / 1 / 2 / 4
+  .btn__slider-arrow
+    top: 15px
+
+.news__slide
+  padding: 20px 40px 33px 40px
+  text-align: center
+  font-size: 15px
+
+.news__title-slide
+  font-size: 16px
+  text-transform: uppercase
+
+.news__slide-wrapper
+  position: relative
+  font-family: $ffgm
+
+
+//***********************************************************************************************
+//  баланс и вход
+//***********************************************************************************************
+
+.short-info
+  grid-area: 2 / 4 / 2 / 7
+
+.balance
+  padding: 20px 0
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.entry
+  color: white
+  text-align: center
+
+
+//***********************************************************************************************
+//  ежедневный бонус
+//***********************************************************************************************
+
+.daily-bonus
+  grid-area: 2 / 7 / 2 / 13
+  .btn__slider-arrow
+    top: -2px
+  .btn_slider-left-arrow
+    left: 0
+  .btn_slider-right-arrow
+    right: 0
+
+.daily-bonus__wrapper
+  position: relative
+  //background-image: url("../images/daily-bonus-bg.png")
+  background-color: rgba(0, 113, 97, .5)
+  background-size: contain
+  background-repeat: no-repeat
+  padding: 20px 20px
+  border-radius: 10px
+  border: 2px solid rgba(255, 255, 255, .4)
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(34, 60, 80, 0.22)
+  -moz-box-shadow: 0px 0px 18px 0px rgba(34, 60, 80, 0.22)
+  box-shadow: 0px 0px 18px 0px rgba(34, 60, 80, 0.22)
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, .4)
+  .btn
+    margin: 0 auto
+    top: 20px
+  .btn_slider-left-arrow
+    left: 15px
+  .btn_slider-right-arrow
+    right: 15px
+
+.daily-bonus__slide
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.daily-bonus__received
+  &:before
+    content: 'получено'
+    display: flex
+    padding: 8px 7px
+    border-radius: 10px
+    background-color: rgba(0, 0, 0, .6)
+    position: absolute
+    color: white
+    text-transform: uppercase
+    font-size: 11px
+    font-family: $ffgl
+
+.daily-bonus__slide-title
+  color: white
+  font-family: $ffgr
+
+.daily-bonus__item-wrapper
+  width: 93px
+  height: 88px
+  background-image: url("../images/border-daily-bonus.png")
+  background-position: center
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    width: 60px
+
+.daily-bonus__item-name
+  font-family: $ffgl
+  font-size: 12px
+  color: white
+  line-height: .9
+  text-align: center
+  width: 90px
+  bottom: 0
+
+.char-list__control
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.char-list_btn-orange
+  background-size: 100% 100%
+
+#char-list
+  .form-group__value
+    text-align: right
+
+.btn-progress
+  color: white
+  position: absolute
+  right: 10px
+  bottom: 10px
+  top: auto !important
+  font-size: 12px
+  border: 1px solid rgba(255, 255, 255, .2)
+  border-radius: 3px
+  padding: 3px 20px
+  font-family: Myriad
+
+.select_index-page
+  transition: all .3s ease
+  &:hover
+    transform: scale(105%)
+
+.white-text
+  color: white
+  font-family: $ffgr
+  text-align: center
+
+.confirm__control
+  justify-content: space-between
+
+@media (max-width: 1600px)
+  .hot-actions
+    grid-area: 1/3/1/8
+
+@media (max-width: 1400px)
+  .hot-actions
+    grid-area: 1/3/1/9
+
+@media (max-width: 1250px)
+  .hot-actions
+    grid-area: 1/4/1/11
+  .avatar
+    grid-area: 1/1/1/4
+  .news
+    grid-area: 2/1/2/6
+  .short-info
+    grid-area: 2/6/2/9
+  .daily-bonus
+    grid-area: 3/1/3/13
+
+@media (max-width: 1100px)
+  .hot-actions
+    grid-area: 1/5/1/13
+  .avatar
+    grid-area: 1/1/1/5
+
+@media (max-width: 1000px)
+  .short-info
+    grid-area: 2/6/2/10
+
+@media (max-width: 850px)
+  .avatar
+    display: none
+  .hot-actions
+    grid-area: 1/1/1/13
+  .news
+    grid-area: 2/1/2/7
+  .short-info
+    grid-area: 2/7/2/13
+
+@media (max-width: 650px)
+  .news
+    grid-area: 2/1/2/13
+  .short-info
+    grid-area: 3/1/3/13
+  .daily-bonus
+    grid-area: 4/1/4/13
+
+@media (max-width: 600px)
+  .hot-actions__btn-group
+    flex-direction: column
+    align-items: center
+  .main-grid
+    grid-template-columns: 50% 50%
+    grid-template-rows: 40px auto
+    grid-template-areas: "a c" "b b"
+    grid-gap: 20px 0
+  .main-grid__col
+    &:nth-child(2)
+      grid-area: b
+    &:nth-child(3)
+      justify-self: end
+
+@media (max-width: 570px)
+  .confirm__control
+    flex-direction: column
+    align-items: center
+    .btn-red
+      margin-bottom: 10px
+
+@media (max-width: 470px)
+  #char-list
+    .form-group
+      flex-direction: column
+      >div
+        width: 100%
+    .form-group__value
+      text-align: left

@@ -1,0 +1,191 @@
+.top-up
+  grid-area: 1 / 1 / 1 / 7
+
+.top-up__form
+  display: flex
+
+.top-up__logo-group
+  display: flex
+  justify-content: space-between
+  position: absolute
+  width: 100%
+  bottom: -98px
+  flex-wrap: wrap
+
+.logo-group__item
+  border-radius: 10px
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 41px
+  flex-basis: 48%
+  border: 1px solid transparent
+  transition: all .3s ease
+
+.top-up_from-group
+  position: relative
+  .form-group__label
+    width: 100px
+  .form-group__value
+    width: auto
+
+
+.top-up-bonus
+  grid-area: 1 / 7 / 1 / 13
+
+.top-up-bonus__content
+  display: grid
+  grid-template-columns: auto auto
+  grid-gap: 0 20px
+
+.top-up-bonus__header
+  display: flex
+  > div
+    width: 50%
+    flex-shrink: 0
+    font-family: $ff !important
+
+.top-up-bonus__row
+  color: white
+  font-size: 15px
+  font-family: $ffgr
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 41px
+  border-radius: 10px
+  margin-bottom: 10px
+  &:last-child
+    margin-bottom: 0
+
+.top-up-bonus__col
+  width: 50%
+  text-align: center
+
+.top-up-bonus_link
+  text-decoration: underline
+  font-family: $ff !important
+
+//***********************************************************************************************
+//  история пополнения
+//***********************************************************************************************
+
+.refill-history
+  grid-area: 2 / 1 / 2 / 13
+
+.refill-history_table
+  td
+    width: 10%
+    &:first-child, &:last-child
+      width: 20%
+
+.refill-history_pagination
+  grid-area: 2 / 1 / 2 / 3
+
+
+@media (max-width: 1300px)
+  .top-up__logo-group
+    position: relative
+    bottom: 0
+
+  .logo-group__item
+    margin-top: 5px
+
+  .top-up
+    grid-area: 1 / 1 / 1 / 5
+
+  .top-up-bonus
+    grid-area: 1 / 5 / 1 / 13
+
+  .top-up__form
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  .top-up_from-group
+    display: block
+    width: 100%
+    .form-group__label
+      margin-bottom: 5px
+
+.refill-history__header
+  display: grid
+  grid-template-columns: auto auto
+  grid-gap: 10px
+
+.refill-history__header-col
+  display: flex
+  color: white
+  font-size: 16px
+  justify-content: space-between
+  padding: 1px 40px
+  > div
+    width: 25%
+    display: flex
+    justify-content: center
+
+.refill-history__rows-group
+  display: grid
+  grid-template-columns: auto auto
+  grid-gap: 10px
+
+.refill-history__row
+  display: flex
+  padding: 10px 40px
+  justify-content: space-between
+  font-size: 15px
+  color: white
+  font-family: $ffgl
+  border-radius: 10px
+  align-items: center
+  > div
+    width: 25%
+    display: flex
+    justify-content: center
+
+@media (max-width: 1100px)
+  .refill-history__header-col, .refill-history__row
+    padding: 10px 20px
+
+  .top-up
+    grid-area: 1 / 1 / 1 / 7
+
+  .top-up-bonus
+    grid-area: 1 / 7 / 1 / 13
+
+  .top-up-bonus__content
+    display: block
+    >div
+      &:nth-child(2)
+        margin-top: 10px
+
+  .top-up-bonus__header
+    .top-up-bonus__row
+      width: 100%
+      &:last-child
+        display: none
+
+@media (max-width: 940px)
+  .refill-history__header
+    display: block
+    .refill-history__header-col
+      &:last-child
+        display: none
+
+  .refill-history__rows-group
+    grid-template-columns: 100%
+
+@media (max-width: 750px)
+  .top-up
+    grid-area: 1 / 1 / 1 / 13
+
+  .top-up-bonus
+    grid-area: 2 / 1 / 2 / 13
+
+  .refill-history
+    grid-area: 3 / 1 / 3 / 13
+
+.select_donation
+  .select__toggle, .select__dropdown
+    font-family: Gotham-Pro
+

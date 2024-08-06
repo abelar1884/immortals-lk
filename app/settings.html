@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immortal.ws</title>
+    <link rel="stylesheet" href="css/app.min.css">
+    <script src="js/app.min.js"></script>
+</head>
+
+<body>
+<nav class="pc-navigation">
+    <div class="inner-top">
+        <div class="flex">
+            <div class="left-fx">
+                <a href="/" class="logo"></a>
+                <div class="status">
+                    <div class="ico on"></div>
+                    <div class="online">
+                        <span>онлайн</span>
+                        <p>3511</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-fx">
+                <ul class="menu">
+                    <li><a href="https://immortals.ws/">ГЛАВНАЯ</a></li>
+                    <li><a href="https://immortals.ws/about_game">ОБ ИГРЕ</a></li>
+                    <li class="children">
+                        <a href="#">СООБЩЕСТВА</a>
+                        <ul class="sub">
+                            <li><a href="https://vk.com/immortals_boi">VKONTAKTE</a></li>
+                            <li><a href="https://discord.com/invite/xF2E8rsvMh">DISCORD</a></li>
+                            <li><a href="https://immortals.ws/forum/index.php">ФОРУМ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">НОВОСТИ</a></li>
+                    <li><a href="https://immortals.ws/forum/index.php?forums/akcii-i-meroprijatija.7/">АКЦИИ И МЕРОПРИЯТИЯ</a></li>
+                </ul>
+                <a href="#" class="link-load">
+                    <img src="images/icons/download.png" alt="">
+                    <span>скачать клиент ( 1.39 GB )</span>
+                </a>
+            </div>
+            <div class="navi-button" onclick="toggleNavi();"><span></span></div>
+        </div>
+    </div>
+</nav>
+<div class="mobile-navigation">
+    <button class="btn btn-mobile-nav-close" onclick="toggleNavi();"></button>
+    <div class="inner">
+        <ul class="menu" data-menu-children="">
+            <li><a href="https://immortals.ws/">ГЛАВНАЯ</a></li>
+            <li><a href="https://immortals.ws/about_game">ОБ ИГРЕ</a></li>
+            <li class="children">
+                <a href="#">СООБЩЕСТВА</a>
+                <ul class="sub">
+                    <li><a href="https://vk.com/immortals_boi">VKONTAKTE</a></li>
+                    <li><a href="https://discord.com/invite/xF2E8rsvMh">DISCORD</a></li>
+                    <li><a href="https://immortals.ws/forum/index.php">ФОРУМ</a></li>
+                </ul>
+            </li>
+            <li><a href="https://immortals.ws//sign-up">СОЗДАТЬ АККАУНТ</a></li>
+            <li><a onclick="showModal('#modal-files');" class="active">СКАЧАТЬ ФАЙЛЫ</a></li>
+            <li><a href="https://immortals.ws//donations/arda.345">ПОПОЛНИТЬ СЧЕТ</a></li>
+            <li><a href="https://immortals.ws//rating/arda.345">РЕЙТИНГ ИГРОКОВ</a></li>
+            <li><a href="https://immortals.ws//sign-in">ЛИЧНЫЙ КАБИНЕТ</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">НОВОСТИ</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?forums/akcii-i-meroprijatija.7/">АКЦИИ И МЕРОПРИЯТИЯ</a></li>
+        </ul>
+        <ul class="links">
+            <li><a href="#"><span>скачать клиент ( 1.39 GB )</span></a></li>
+            <li><a href="#"><span>info@arcana.su</span></a></li>
+        </ul>
+    </div>
+</div>
+
+<main class="main">
+    <div class="main-grid">
+        <div class="main-grid__col">
+            <div class="menu">
+                <div class="menu__btn" onclick="toggleSideBar()">
+                    <div class="menu__btn-line"></div>
+                    <div class="menu__btn-line"></div>
+                    <div class="menu__btn-line"></div>
+                </div>
+            </div>
+            <div class="side-menu">
+                <button class="btn btn-close btn-close_side-menu" onclick="toggleSideBar()"></button>
+                <div class="side-menu__avatar">
+                    <div class="side-menu__img mb_1" style="background-image: url(images/avatar.png)" ></div>
+                    <div class="side-menu__login">
+                        Abelar
+                    </div>
+                    <div class="side-menu__balance">
+                        Баланс: 100 ZEN
+                    </div>
+                </div>
+                <ul class="side-menu__list">
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-1"></div>
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-2"></div>
+                            Аккаунты
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-3"></div>
+                            Пожертвования
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-4"></div>
+                            Бонусные коды
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-8"></div>
+                            Инвентарь
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-5"></div>
+                            Поддержка
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-6"></div>
+                            Настройки
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-7"></div>
+                            Выход
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-grid__col">
+            <div class="page-title mb_2">
+                <img src="images/icons/settings-page-title.png" alt="">
+                <div>
+                    настройки
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb__item">
+                            <a href="#">Главная</a>
+                        </li>
+                        <li class="breadcrumb__item">Настройки</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="index-grid">
+                        <div class="settings__form">
+                            <div class="account-form mb_3">
+                                <h4 class="subtitle account-form-bg">
+                                    Ваш аккаунт
+                                </h4>
+                                <form class="settings__form-account">
+                                    <div class="form-group">
+                                        <div class="form-group__label">
+                                            Логин
+                                        </div>
+                                        <div class="form-group__value input__wrapper">
+                                            <input class="input bg1" placeholder="Введите логин">
+                                            <div class="input__error-message">
+                                                Ошибка
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-group__label">
+                                            Email
+                                        </div>
+                                        <div class="form-group__value input__wrapper">
+                                            <input class="input bg1" placeholder="Введите email">
+                                            <div class="input__error-message">
+                                                Ошибка
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-group__label">
+                                            Имя
+                                        </div>
+                                        <div class="form-group__value input__wrapper">
+                                            <input class="input bg1" placeholder="Ваше имя">
+                                            <div class="input__error-message">
+                                                Ошибка
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-group__label">
+                                            Аватар
+                                        </div>
+                                        <div class="form-group__value">
+                                            <div class="input__file-wrapper">
+                                                <input type="file" class="input__file">
+                                                <div class="btn-simple-orange input__file-btn">
+                                                    Загрузить
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group__submit">
+                                        <button class="btn btn-red">
+                                            <img src="images/icons/ok.png" alt="">
+                                            Сохранить
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="password-form">
+                                <h4 class="subtitle account-form-bg">
+                                    Смена пароля
+                                </h4>
+                                <form class="settings__form-password">
+                                    <div class="form-group">
+                                        <div class="form-group__label">
+                                            Текущий пароль
+                                        </div>
+                                        <div class="form-group__value input__wrapper">
+                                            <input class="input bg1" placeholder="Введите текущий пароль">
+                                            <div class="input__error-message">
+                                                Ошибка
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-group__label">
+                                            Новый пароль
+                                        </div>
+                                        <div class="form-group__value input__wrapper">
+                                            <input class="input bg1 input__error" placeholder="Введите новый пароль">
+                                            <div class="input__error-message">
+                                                Ошибка
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-group__label">
+                                            Подтверждение
+                                        </div>
+                                        <div class="form-group__value input__wrapper">
+                                            <input class="input bg1 input__error" placeholder="Подтвердите пароль">
+                                            <div class="input__error-message">
+                                                Ошибка
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group__submit">
+                                        <button class="btn btn-orange">
+                                            <img src="images/icons/lock.png" alt="">
+                                            Сменть пароль
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    <div class="auth-history">
+                        <h4 class="subtitle auth-history-form-bg">
+                            История авторизаций
+                        </h4>
+                        <div class="table__wrapper">
+                            <table class="table table_bg1 inventory_table table_auto-place-number">
+                                <thead>
+                                <th>№:</th>
+                                <th>Дата:</th>
+                                <th>IP:</th>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="place">
+                                            1
+                                        </div>
+                                    </td>
+                                    <td>
+                                        12 дек. 2021 г., 18:00
+                                    </td>
+                                    <td>
+                                        89.23.149.79
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="place">
+                                            2
+                                        </div>
+                                    </td>
+                                    <td>
+                                        12 дек. 2021 г., 18:00
+                                    </td>
+                                    <td>
+                                        89.23.149.79
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="place">
+                                            3
+                                        </div>
+                                    </td>
+                                    <td>
+                                        12 дек. 2021 г., 18:00
+                                    </td>
+                                    <td>
+                                        89.23.149.79
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="place">
+                                            4
+                                        </div>
+                                    </td>
+                                    <td>
+                                        12 дек. 2021 г., 18:00
+                                    </td>
+                                    <td>
+                                        89.23.149.79
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="place">
+                                            4
+                                        </div>
+                                    </td>
+                                    <td>
+                                        12 дек. 2021 г., 18:00
+                                    </td>
+                                    <td>
+                                        89.23.149.79
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="place">
+                                            4
+                                        </div>
+                                    </td>
+                                    <td>
+                                        12 дек. 2021 г., 18:00
+                                    </td>
+                                    <td>
+                                        89.23.149.79
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="place">
+                                            4
+                                        </div>
+                                    </td>
+                                    <td>
+                                        12 дек. 2021 г., 18:00
+                                    </td>
+                                    <td>
+                                        89.23.149.79
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="table__loader hidden">
+                                Загрузка
+                                <div class="loader__wrapper">
+                                    <div class="loader"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination bg1">
+                            <ul class="pagination__container pagination_history-size">
+                                <li class="pagination__page"><button class="pagination__left-arrow"><img src="images/icons/left-arrow.png" alt=""></button></li>
+                                <li class="pagination__page"><button class="pagination_page-active">1</button></li>
+                                <li class="pagination__page"><button>2</button></li>
+                                <li class="pagination__page"><button>3</button></li>
+                                <li class="pagination__page"><button>4</button></li>
+                                <li class="pagination__page"><button class="pagination__right-arrow"><img src="images/icons/right-arrow.png" alt=""></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-grid__col">
+           <div class="flex notify__group">
+               <div class="notify">
+                   <button class="btn btn-notify">
+                       <span class="btn-notify__have-notify"></span>
+                       <img src="images/icons/notify.png" alt="">
+                   </button>
+               </div>
+               <button class="btn">
+                   <img src="images/icons/settings.png" alt="">
+               </button>
+           </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="menu-menyu-v-podvale-container">
+        <ul id="menu-menyu-v-podvale" class="footer__navi">
+            <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">Новости</a></li>
+            <li><a href="https://immortals.ws/privacy_policy/">Политика конфиденциальности</a></li>
+            <li><a href="https://immortals.ws/terms_of_use/">Пользовательское соглашение</a></li>
+            <li><a href="https://immortals.ws/penalty/">Нарушения и наказания</a></li>
+            <li><a href="https://immortals.ws/forum/index.php">Форум</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?threads/instrukcija-po-obrascheniju-v-texnicheskuju-podderzhku.23/">Тех. Поддержка</a></li>
+        </ul>
+    </div>
+    <div class="footer__text">
+        Immortals.ws - Классический игровой проект, знаменитой онлайн игры Battle of the
+    </div>
+</footer>
+
+<div id="settings" class="modal animate__animated">
+    <div class="modal__container modal__settings">
+        <button class="btn close-modal" onclick="toggleModal('settings')"></button>
+        <form class="">
+            <div class="form-group">
+                <div class="form-group__label">
+                    Логин
+                </div>
+                <div class="form-group__value">
+                    Abelar
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group__label">
+                    Email
+                </div>
+                <div class="form-group__value">
+                    admin@admin.com
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group__label">
+                    Имя
+                </div>
+                <div class="form-group__value">
+                    <input class="input bg2" placeholder="Ваше имя">
+                </div>
+            </div>
+            <div class="form-group__submit">
+                <button class="btn btn-red">
+                    <img src="images/icons/ok.png" alt="">
+                    Сохранить
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="cropper" class="modal animate__animated">
+    <div class="modal__container modal_container-sm modal__container-cropper">
+        <button class="btn close-modal" onclick="toggleModal('cropper')"></button>
+        <h4 class="subtitle modal__container-cropper modal__cropper-title">
+            Кадрировать изображение
+        </h4>
+        <div class="cropper__wrapper">
+        </div>
+        <div class="mt_1 modal__cropper-control">
+            <button class="btn btn-red">
+                <img src="images/icons/ok.png" alt="">
+                Кадрировать
+            </button>
+            <button class="btn btn__cropper-cancel mt_1">
+                Отменить
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+  const select1 = new CustomSelect('#select-1')
+</script>
+</body>
+</html>

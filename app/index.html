@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immortal.ws</title>
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <script src="js/app.min.js"></script>
+    <link rel="shortcut icon" href="../app/images/favicon.png" type="image/png">
+</head>
+
+<body>
+
+<div class="slash active">
+    <div class="splash-icon">
+        <img src="../app/images/logo.png">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+</div>
+
+<nav class="pc-navigation">
+    <div class="inner-top">
+        <div class="flex">
+            <div class="left-fx">
+                <a href="/" class="logo"></a>
+                <div class="status">
+                    <div class="ico on"></div>
+                    <div class="online">
+                        <span>онлайн</span>
+                        <p>3511</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-fx">
+                <ul class="menu">
+                    <li><a href="https://immortals.ws/">ГЛАВНАЯ</a></li>
+                    <li><a href="https://immortals.ws/about_game">ОБ ИГРЕ</a></li>
+                    <li class="children">
+                        <a href="#">СООБЩЕСТВА</a>
+                        <ul class="sub">
+                            <li><a href="https://vk.com/immortals_boi">VKONTAKTE</a></li>
+                            <li><a href="https://discord.com/invite/xF2E8rsvMh">DISCORD</a></li>
+                            <li><a href="https://immortals.ws/forum/index.php">ФОРУМ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">НОВОСТИ</a></li>
+                    <li><a href="https://immortals.ws/forum/index.php?forums/akcii-i-meroprijatija.7/">АКЦИИ И МЕРОПРИЯТИЯ</a></li>
+                </ul>
+                <a href="https://update.immortals.ws/downloads/SGCQ_SETUP_2022037.rar" class="link-load">
+                    <img src="images/icons/download.png" alt="">
+                    <span>скачать клиент ( 1.39 GB )</span>
+                </a>
+            </div>
+            <div class="navi-button" onclick="toggleNavi();"><span></span></div>
+        </div>
+    </div>
+</nav>
+<div class="mobile-navigation">
+    <button class="btn btn-mobile-nav-close" onclick="toggleNavi();"></button>
+    <div class="inner">
+        <ul class="menu" data-menu-children="">
+            <li><a href="https://immortals.ws/">ГЛАВНАЯ</a></li>
+            <li><a href="https://immortals.ws/about_game">ОБ ИГРЕ</a></li>
+            <li class="children">
+                <a href="#">СООБЩЕСТВА</a>
+                <ul class="sub">
+                    <li><a href="https://vk.com/immortals_boi">VKONTAKTE</a></li>
+                    <li><a href="https://discord.com/invite/xF2E8rsvMh">DISCORD</a></li>
+                    <li><a href="https://immortals.ws/forum/index.php">ФОРУМ</a></li>
+                </ul>
+            </li>
+            <li><a href="https://immortals.ws//sign-up">СОЗДАТЬ АККАУНТ</a></li>
+            <li><a onclick="showModal('#modal-files');" class="active">СКАЧАТЬ ФАЙЛЫ</a></li>
+            <li><a href="https://immortals.ws//donations/arda.345">ПОПОЛНИТЬ СЧЕТ</a></li>
+            <li><a href="https://immortals.ws//rating/arda.345">РЕЙТИНГ ИГРОКОВ</a></li>
+            <li><a href="https://immortals.ws//sign-in">ЛИЧНЫЙ КАБИНЕТ</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">НОВОСТИ</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?forums/akcii-i-meroprijatija.7/">АКЦИИ И МЕРОПРИЯТИЯ</a></li>
+        </ul>
+        <ul class="links">
+            <li><a href="#"><span>скачать клиент ( 1.39 GB )</span></a></li>
+            <li><a href="#"><span>info@arcana.su</span></a></li>
+        </ul>
+    </div>
+</div>
+
+<main class="main">
+    <div class="main-grid">
+        <div class="main-grid__col">
+            <div class="menu">
+                <div class="menu__btn" onclick="toggleSideBar()">
+                    <div class="menu__btn-line"></div>
+                    <div class="menu__btn-line"></div>
+                    <div class="menu__btn-line"></div>
+                </div>
+            </div>
+            <div class="side-menu">
+                <button class="btn btn-close btn-close_side-menu" onclick="toggleSideBar()"></button>
+                <div class="side-menu__avatar">
+                    <div onclick="toggleModal('cropper')" class="side-menu__img mb_1" style="background-image: url(images/avatar.png)" ></div>
+                    <div class="side-menu__login">
+                        Abelar
+                    </div>
+                    <div class="side-menu__balance">
+                        Баланс: 100 ZEN
+                    </div>
+                </div>
+                <div class="select select_index-page select_server-list mt_2" id="select-3">
+                    <button type="button" class="select__toggle" name="car" value="" data-select="toggle" data-index="-1">Выберите сервер</button>
+                    <div class="select__dropdown">
+                        <ul class="select__options">
+                            <li class="select__option" data-select="option" data-value="volkswagen" data-index="0">
+                                <div class="place place-1 mr_1">
+                                </div>
+                                Аккаунт
+                            </li>
+                            <li class="select__option" data-select="option" data-value="ford" data-index="1">
+                                <div class="place place-2 mr_1">
+                                </div>
+                                Аккаунт
+                            </li>
+                            <li class="select__option" data-select="option" data-value="toyota" data-index="2">
+                                <div class="place place-3 mr_1">
+                                </div>
+                                Аккаунт
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="side-menu__list">
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-1"></div>
+                            Главная
+                        </a>
+                    </li>
+                    <li onclick="toggleModal('char-list')">
+                        <a>
+                            <div class="side-menu__list-icon side-menu_icon-2"></div>
+                            Аккаунты
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-3"></div>
+                            Пожертвования
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-4"></div>
+                            Бонусные коды
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-5"></div>
+                            Поддержка
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-6"></div>
+                            Настройки
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-9"></div>
+                            Рефералы
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-7"></div>
+                            Выход
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-grid__col">
+            <div class="page-title">
+                <img src="images/icons/main-page-title.png" alt="">
+                <span>
+                    личный кабинет
+                </span>
+            </div>
+            <div class="content">
+                <div class="index-grid">
+                    <div class="avatar">
+                        <div class="avatar-img" style="background-image: url(images/avatar.png)" ></div>
+                    </div>
+                    <div class="hot-actions">
+                        <h2 class="title-login">
+                            <span>
+                                Abelar
+                            </span>
+                        </h2>
+                        <div class="hot-actions__btn-group mb_1">
+                            <button class="btn btn-orange mb_1" onclick="toggleModal('confirm')">
+                                <img src="images/icons/coin.png" alt="">
+                                Пополнить баланс
+                            </button>
+                            <button class="btn btn-red" onclick="toggleModal('create-account-form')">
+                                <img src="images/icons/user.png" alt="">
+                                Создать аккаунт
+                            </button>
+                        </div>
+                        <div class="select select_index-page" id="select-1">
+                            <button type="button" class="select__toggle" name="car" value="" data-select="toggle" data-index="-1">Список аккаунтов</button>
+                            <div class="select__dropdown">
+                                <ul class="select__options">
+                                    <li class="select__option" data-select="option" data-value="volkswagen" data-index="0">
+                                        <div class="place place-1 mr_1">
+                                        </div>
+                                        Аккаунт
+                                    </li>
+                                    <li class="select__option" data-select="option" data-value="ford" data-index="1">
+                                        <div class="place place-2 mr_1">
+                                        </div>
+                                        Аккаунт
+                                    </li>
+                                    <li class="select__option" data-select="option" data-value="toyota" data-index="2">
+                                        <div class="place place-3 mr_1">
+                                        </div>
+                                        Аккаунт
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Вторая сторока !-->
+                    <div class="news slick-firefox-fix">
+                        <h4 class="subtitle news-bg">
+                            Новости
+                        </h4>
+                        <div class="index-bg news__slide-wrapper">
+                            <button class="btn btn__slider-arrow btn_slider-left-arrow"><img src="images/icons/left-arrow.png" alt=""></button>
+                            <button class="btn btn__slider-arrow btn_slider-right-arrow"><img src="images/icons/right-arrow.png" alt=""></button>
+                            <div class="news__slider">
+                                <div class="news__slide">
+                                    <div class="news__title-slide mb_1">
+                                        Скидки
+                                    </div>
+                                    <div class="news__dec-slide mb_1">
+                                        В честь новогодних праздников на нашем
+                                        сервере активны бонусы на пополнение.
+                                        Подробности на форуме.
+                                    </div>
+                                    <div class="news__date-slide">
+                                        22.11.1992
+                                    </div>
+                                </div>
+                                <div class="news__slide">
+                                    <div class="news__title-slide mb_1">
+                                        Скидки
+                                    </div>
+                                    <div class="news__dec-slide mb_1">
+                                        В честь новогодних праздников на нашем
+                                        сервере активны бонусы на пополнение.
+                                        Подробности на форуме.
+                                    </div>
+                                    <div class="news__date-slide">
+                                        22.11.1992
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="short-info">
+                        <h4 class="subtitle short-info-bg">
+                            Баланс
+                        </h4>
+                        <div class="balance index-bg">
+                            <div class="mb_1">
+                                100 zen
+                            </div>
+                            <button class="btn btn-simple-orange">
+                                Пополнить
+                            </button>
+                        </div>
+                        <h4 class="subtitle entry-bg">
+                            Вход
+                        </h4>
+                        <div class="entry">
+                            12.12.1992 г., 18:00
+                        </div>
+                    </div>
+                    <div class="daily-bonus slick-firefox-fix">
+                        <h4 class="subtitle daily-bonus-bg">
+                            Ежедневный бонус
+                        </h4>
+                        <div class="daily-bonus__wrapper">
+                            <button class="btn btn__slider-arrow btn_slider-left-arrow"><img src="images/icons/left-arrow.png" alt=""></button>
+                            <button class="btn btn__slider-arrow btn_slider-right-arrow"><img src="images/icons/right-arrow.png" alt=""></button>
+                            <div class="daily-bonus__slider mb_1">
+                                <div>
+                                    <div class="daily-bonus__slide">
+                                        <span class="daily-bonus__slide-title">1 день</span>
+                                        <div class="daily-bonus__item-wrapper daily-bonus__received">
+                                            <img src="images/item/item-1.jpg" alt="">
+                                        </div>
+                                        <div class="daily-bonus__item-name">
+                                            Название предмета х1
+                                            Название предмета х1
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="daily-bonus__slide">
+                                        <span class="daily-bonus__slide-title">1 день</span>
+                                        <div class="daily-bonus__item-wrapper">
+                                            <img src="images/item/item-1.jpg" alt="">
+                                        </div>
+                                        <div class="daily-bonus__item-name">
+                                            Название
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="daily-bonus__slide">
+                                        <span class="daily-bonus__slide-title">1 день</span>
+                                        <div class="daily-bonus__item-wrapper">
+                                            <img src="images/item/item-1.jpg" alt="">
+                                        </div>
+                                        <div class="daily-bonus__item-name">
+                                            Название предмета х1
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="daily-bonus__slide">
+                                        <span class="daily-bonus__slide-title">1 день</span>
+                                        <div class="daily-bonus__item-wrapper">
+                                            <img src="images/item/item-1.jpg" alt="">
+                                        </div>
+                                        <div class="daily-bonus__item-name">
+                                            Название предмета х1
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="daily-bonus__slide">
+                                        <span class="daily-bonus__slide-title">1 день</span>
+                                        <div class="daily-bonus__item-wrapper">
+                                            <img src="images/item/item-1.jpg" alt="">
+                                        </div>
+                                        <div class="daily-bonus__item-name">
+                                            Название предмета х1
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="daily-bonus__slide">
+                                        <span class="daily-bonus__slide-title">1 день</span>
+                                        <div class="daily-bonus__item-wrapper">
+                                            <img src="images/item/item-1.jpg" alt="">
+                                        </div>
+                                        <div class="daily-bonus__item-name">
+                                            Название предмета х1
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-simple-orange">
+                                Получить
+                            </button>
+                            <button class="btn btn-progress">
+                                Прогресс 7 День
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-grid__col">
+           <div class="flex notify__group">
+               <div class="notify">
+                   <button class="btn btn-notify" onclick="toggleNotify()">
+                       <span class="btn-notify__have-notify"></span>
+                       <img src="images/icons/notify.png" alt="">
+                   </button>
+               </div>
+               <button class="btn">
+                   <img src="images/icons/settings.png" alt="">
+               </button>
+           </div>
+        </div>
+    </div>
+    <div class="dropdown-notify animate__animated hidden">
+        <div class="dropdown-notify__item animate__animated">
+            <div>
+                <img src="images/icons/coin.png" alt="">
+            </div>
+            <div class="dropdown-notify__text">
+                <div class="dropdown-notify__title text-color-y1">УУУjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjсука</div>
+                <div class="dropdown-notify__desc">
+                    Это текст рыба, в этом тексте будет
+                    написано само уведомление.
+                </div>
+            </div>
+            <button class="btn btn-close close-notify" onclick="closeMessageNotify(this)"></button>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="menu-menyu-v-podvale-container">
+        <ul id="menu-menyu-v-podvale" class="footer__navi">
+            <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">Новости</a></li>
+            <li><a href="https://immortals.ws/privacy_policy/">Политика конфиденциальности</a></li>
+            <li><a href="https://immortals.ws/terms_of_use/">Пользовательское соглашение</a></li>
+            <li><a href="https://immortals.ws/penalty/">Нарушения и наказания</a></li>
+            <li><a href="https://immortals.ws/forum/index.php">Форум</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?threads/instrukcija-po-obrascheniju-v-texnicheskuju-podderzhku.23/">Тех. Поддержка</a></li>
+        </ul>
+    </div>
+    <div class="footer__text">
+        Immortals.ws - Классический игровой проект, знаменитой онлайн игры Battle of the
+    </div>
+</footer>
+
+<!-- modal -->
+<div id="replenish-form" class="modal animate__animated">
+    <div class="modal__container modal_container-sm">
+        <button class="btn close-modal" onclick="toggleModal('replenish-form')"></button>
+        <h4 class="subtitle replenish-bg">
+            Пополнение баланса
+        </h4>
+        <form class="form mt_3">
+            <div class="form-group">
+                <div class="form-group__label">Ваш баланс</div>
+                <div class="form-group__value">0 zen</div>
+            </div>
+            <div class="form-group">
+                <div class="form-group__label">Ваш баланс</div>
+                <div class="form-group__value">0 zen</div>
+            </div>
+            <div class="form-group">
+                <div class="form-group__label">Сумма</div>
+                <div class="form-group__value" style="display: flex; align-items: center">
+                    <input id="replenish-input" placeholder="Введите сумму" class="input" value="0"> <div class="text-color-y1 ml_1">руб.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group__label">Вы получите</div>
+                <div id="replenish-total" class="form-group__value">0 zen</div>
+            </div>
+            <div class="form-group mt_3">
+                <div class="form-group__text">
+                    Курс: 50 zen - 1 руб.
+                </div>
+            </div>
+            <div class="form-group mt_3">
+                <div class="form-group__text font-color-danger">
+                    <strong>Средства будут выведены на сервер 1</strong>
+                </div>
+            </div>
+            <div class="form-group form-group__submit mt_3">
+                <button class="btn btn-orange">
+                    <img src="images/icons/coin.png" alt="">
+                    Купить ZEN
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="create-account-form" class="modal animate__animated">
+    <div class="modal__container modal_container-lg">
+        <button class="btn close-modal" onclick="toggleModal('create-account-form')"></button>
+        <h4 class="subtitle create-account-bg">
+            Создание игрового аккаунта
+        </h4>
+        <form class="form mt_3">
+            <div class="form-group">
+                <div class="form-group__label">Аккаунт</div>
+                <div class="form-group__value">
+                    <div class="input__wrapper">
+                        <input class="input input_show-error">
+                        <div class="input__error-message">
+                            Ошибка
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group__label">Пароль</div>
+                <div class="form-group__value">
+                    <div class="input__wrapper">
+                        <input class="input input_show-error">
+                        <div class="input__error-message">
+                            Ошибка
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group__label">Подтверждение</div>
+                <div class="form-group__value">
+                    <div class="input__wrapper">
+                        <input class="input input_show-error">
+                        <div class="input__error-message">
+                            Ошибка
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="select select__form" id="select-2">
+                    <button type="button" class="select__toggle" name="car" value="" data-select="toggle" data-index="-1">Список серверов</button>
+                    <div class="select__dropdown">
+                        <ul class="select__options">
+                            <li class="select__option" data-select="option" data-value="volkswagen" data-index="0">
+                                <div class="place place-1 mr_1">
+                                </div>
+                                Сервер
+                            </li>
+                            <li class="select__option" data-select="option" data-value="ford" data-index="1">
+                                <div class="place place-2 mr_1">
+                                </div>
+                                Сервер
+                            </li>
+                            <li class="select__option" data-select="option" data-value="toyota" data-index="2">
+                                <div class="place place-3 mr_1">
+                                </div>
+                                Сервер
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group form-group__submit mt_3">
+                <button class="btn btn-red">
+                    <img src="images/icons/user.png" alt="">
+                    Создать аккаунт
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="char-list" class="modal animate__animated">
+    <div class="modal__container modal_container-lg">
+        <button class="btn close-modal" onclick="toggleModal('char-list')"></button>
+        <div class="form-group">
+            <div class="form-group__label">
+                Логин
+            </div>
+            <div class="form-group__value">
+                Abelar
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group__label">
+                Дата создания
+            </div>
+            <div class="form-group__value">
+                10.10.2022
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group__label">
+                Баланс
+            </div>
+            <div class="form-group__value">
+                200 zen
+            </div>
+        </div>
+        <div class="char-list__control mt_2 mb_2">
+            <button class="btn btn-orange char-list_btn-orange mb_1">
+                <img src="images/icons/coin.png" alt="">
+                Пополнить баланс
+            </button>
+            <button class="btn btn-red">
+                <img src="images/icons/lock.png" alt="">
+                Сменить пароль
+            </button>
+        </div>
+        <div class="table__wrapper">
+            <table class="table">
+                <thead>
+                <th></th>
+                <th>Персонаж:</th>
+                <th>Уровень:</th>
+                <th>Професия:</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><div class="place place-1"></div></td>
+                    <td>вася</td>
+                    <td>23</td>
+                    <td>Скалолаз</td>
+                </tr>
+                <tr>
+                    <td><div class="place place-2"></div></td>
+                    <td>вася</td>
+                    <td>23</td>
+                    <td>Скалолаз</td>
+                </tr>
+                <tr>
+                    <td><div class="place place-3"></div></td>
+                    <td>вася</td>
+                    <td>23</td>
+                    <td>Скалолаз</td>
+                </tr>
+                <tr>
+                    <td><div class="place place-4"></div></td>
+                    <td>вася</td>
+                    <td>23</td>
+                    <td>Скалолаз</td>
+                </tr>
+                <tr>
+                    <td><div class="place place-5"></div></td>
+                    <td>вася</td>
+                    <td>23</td>
+                    <td>Скалолаз</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="confirm" class="modal animate__animated">
+    <div class="modal__container modal_container-sm">
+        <button class="btn close-modal" onclick="toggleModal('confirm')"></button>
+        <h4 class="subtitle replenish-bg">
+            Подтверждение
+        </h4>
+        <div class="white-text mt_2 mb_2">
+            Валюта будет переведена на сервер <span class="text-color-y1">Arda</span>
+        </div>
+        <div class="flex confirm__control">
+            <button class="btn btn-red">
+                Отменить
+            </button>
+            <button class="btn btn-orange mb_1">
+                Подтвердить
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+  $(document).ready(() => {
+    //подключаем select
+    const select1 = new CustomSelect('#select-1')
+    const select2 = new CustomSelect('#select-2')
+    const select3 = new CustomSelect('#select-3')
+
+    // считаем сумму zen
+    document.getElementById('replenish-input').addEventListener('input', function () {
+      const total = Number(this.value) * 50
+      document.getElementById('replenish-total').innerHTML = total ? `${total} zen` : 'Сумма не корректна'
+    })
+
+    //слайдер новостей
+    const news = $('.news__slider').slick({
+      arrows: false
+    })
+
+    //слайдер наград
+    const dailyBonus = $('.daily-bonus__slider').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1400,
+          settings: {
+            slidesToShow: 4,
+          }
+        },
+        {
+          breakpoint: 1250,
+          settings: {
+            slidesToShow: 6,
+
+          }
+        },
+        {
+          breakpoint: 770,
+          settings: {
+            slidesToShow: 4,
+          }
+        },
+        {
+          breakpoint: 430,
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+        {
+          breakpoint: 350,
+          settings: {
+            slidesToShow: 2,
+          }
+        }
+      ]
+    })
+
+    const loader = document.querySelector('.slash').classList
+
+    setTimeout(function(){
+      loader.remove('active')
+    }, 2000);
+  })
+</script>
+</body>
+</html>

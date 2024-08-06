@@ -1,0 +1,198 @@
+@for $i from 1 through 6
+  .ml_#{$i}
+    margin-left: 10px * $i
+
+  .mr_#{$i}
+    margin-right: 10px * $i
+
+  .mb_#{$i}
+    margin-bottom: 10px * $i
+
+  .mt_#{$i}
+    margin-top: 10px * $i
+
+
+body
+  overflow: hidden
+  font-family: $ff
+  background-image: url("../images/bg.jpg")
+  background-repeat: no-repeat
+  background-position: center top
+  height: 100vh
+  margin: 0
+
+.main
+  padding: 40px 0
+  max-width: 1600px
+  margin: 0 auto
+  position: relative
+  min-height: calc(100vh - 252px)
+
+a
+  text-decoration: none
+  color: $y1
+  transition: opacity .3s ease
+
+.main-grid
+  display: grid
+  grid-template-columns: 230px auto 100px
+  margin: 0 auto
+  max-width: 1680px
+  position: relative
+  grid-gap: 20px
+  min-height: inherit
+
+.page-title
+  font-size: 20px
+  color: white
+  display: flex
+  align-items: center
+  text-transform: uppercase
+  img
+    margin-right: 10px
+
+.subtitle
+  color: white
+  font-size: 22px
+  background-position: center
+  background-repeat: no-repeat
+  text-align: center
+  margin: 10px
+  background-position-y: 10px
+
+.place
+  width: 26px
+  height: 26px
+  display: flex
+  align-items: center
+  justify-content: center
+  color: white
+  font-size: 15px
+  border-radius: 50%
+  font-family: $ffgb
+  flex-shrink: 0
+
+.text-color-y1
+  color: $y1 !important
+
+.place-1
+  border: 2px solid $y1
+  &:before
+    content: '1'
+
+.place-2
+  border: 2px solid white
+  &:before
+    content: '2'
+
+.place-3
+  border: 2px solid $y2
+  &:before
+    content: '3'
+
+.place-4
+  border: 2px solid #635a5a
+  &:before
+    content: '4'
+
+.place-5
+  border: 2px solid #ff0000
+  &:before
+    content: '5'
+
+ul
+  padding: 0
+
+.flex
+  display: flex
+
+.hidden
+  display: none !important
+
+.bg1
+  background-color: $bg1 !important
+
+.bg2
+  background-color: $bg2 !important
+
+.regular-ff
+  font-family: $ffgl !important
+
+.link-load
+  transition: all .3s ease
+
+.notify__group
+  button
+    &:hover
+      transform: scale(115%)
+      filter: contrast(200%)
+
+.modal__success
+  text-align: center
+  .first__block
+    color: $y1
+  .second__block
+    color: white
+    font-size: 14px
+  .third_block
+    font-size: 14px
+    color: #ff597c
+  .fourth_block
+    font-size: 14px
+    color: #a2a2a2
+
+.third-btn-group
+  display: flex
+  justify-content: space-between
+  .btn
+    width: 32%
+    background-image: url("../images/red-btn-v2.png")
+    background-size: 100% 100%
+    text-transform: uppercase
+    font-size: 12px
+
+.social-group
+  display: flex
+  align-items: flex-start
+  justify-content: center
+
+.slick-firefox-fix
+  min-height: 0
+  min-width: 0
+
+.font_green
+  color: #00ff1e !important
+
+.margin-auto
+  margin: 0 auto !important
+
+@media (max-width: 1280px)
+  body
+    overflow: auto
+    min-height: auto !important
+    background-size: cover
+
+@media (max-width: 1000px)
+  .main
+    padding: 30px 20px
+    min-height: calc(100vh - 200px)
+  .main-grid
+    grid-template-columns: 70px auto 70px
+
+
+@media (max-width: 900px)
+  body
+    height: auto
+    min-height: 1100px
+    position: relative
+
+@media (max-width: 400px)
+  .place
+    width: 18px
+    height: 18px
+    font-size: 11px
+
+.flex-grow-2
+  flex-grow: 2
+
+

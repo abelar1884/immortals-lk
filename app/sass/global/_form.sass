@@ -1,0 +1,81 @@
+.form
+  .form-group
+    &:last-child
+      margin-bottom: 0
+
+.form-group
+  margin-bottom: 20px
+  display: flex
+  align-items: center
+
+.form-group__label
+  color: white
+  font-size: 18px
+  width: 40%
+  &:after
+    content: ':'
+
+.form-group__value
+  font-family: $ffgr
+  color: white
+  font-size: 15px
+  width: 60%
+
+.form-group__text
+  color: white
+  font-size: 14px
+  font-family: $ffgr
+
+.form-group__submit
+  display: flex
+  justify-content: center
+
+.links-group
+  justify-content: center
+  display: flex
+  a
+    font-size: 14px
+    font-family: $ffgl
+
+.links-group__separate
+  height: 15px
+  width: 3px
+  background-color: $y1
+  margin: 0 10px
+
+.form-group_recaptcha
+  justify-content: center
+  display: flex
+
+.select_server-list
+  margin: 30px auto 0 auto
+  width: 195px
+  z-index: 100
+  &:hover
+    transform: scale(1) !important
+  .select__toggle, .select__dropdown
+    background-color: rgba(38,12,0,.7)
+
+.font-color-danger
+  color: #bd050c !important
+
+@media (max-width: 540px)
+  .form
+    .form-group
+      flex-direction: column
+      align-items: normal
+      > div
+        width: 100%
+    .form-group__label
+      margin-bottom: 5px
+  .links-group
+    flex-direction: column
+    align-items: center
+    > div
+      display: none
+
+
+@media (max-width: 440px)
+  .g-recaptcha
+    transform: scale(.6)
+

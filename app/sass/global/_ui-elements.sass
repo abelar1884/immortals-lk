@@ -1,0 +1,711 @@
+.btn
+  background: transparent
+  border: none
+  color: white
+  font-size: 16px
+  font-family: $ff
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: all .3s ease
+  padding: 0
+  background-size: contain
+  background-position: center
+  background-repeat: no-repeat
+  max-height: 41px
+  flex-shrink: 0
+  &:hover
+    transform: scale(1.05)
+  img
+    margin-right: 10px
+
+.btn_disable
+  filter: contrast(50%)
+  cursor: none
+  &:hover
+    transform: scale(1) !important
+    filter: contrast(50%) !important
+
+.btn-orange
+  background-image: url("../images/btn-orange-bg.png")
+  width: 202px
+  height: 43px
+  &:hover
+    filter: contrast(200%)
+
+.btn-orange_long
+  background-image: url("../images/btn-orange-bg-long.png")
+  width: 259px
+  height: 43px
+  &:hover
+    filter: contrast(200%)
+
+.btn-red
+  background-image: url("../images/btn-red-bg.png")
+  width: 213px
+  height: 43px
+  &:hover
+    filter: contrast(200%)
+
+.btn-red_long
+  background-image: url("../images/btn-red-bg-long.png")
+  width: 259px
+  height: 43px
+  &:hover
+    filter: contrast(200%)
+
+.btn-green
+  background-image: url("../images/btn-green-bg.png")
+  width: 259px
+  height: 43px
+  &:hover
+    filter: contrast(200%)
+
+.btn-simple-orange
+  background-image: url("../images/btn-orange-simple-bg.png")
+  width: 150px
+  height: 35px
+  line-height: .6
+  &:hover
+    filter: saturate(200%)
+
+.btn-outline-orange
+  background-image: url("../images/btn-orange-simple-bg.png")
+  width: 150px
+  height: 35px
+  line-height: .6
+  &:hover
+    filter: saturate(200%)
+
+.btn-orange-long
+  background-image: url("../images/btn-orange-long-bg.png")
+  width: 175px
+  height: 28px
+  &:hover
+    background-image: url("../images/btn-orange-long-hover-bg.png")
+
+.menu__btn
+  position: relative
+  z-index: 10
+  width: 27px
+  height: 21px
+  //display: flex
+  flex-direction: column
+  justify-content: space-between
+  cursor: pointer
+  display: none
+
+.menu__btn-line
+  width: 100%
+  height: 4px
+  background-color: #ff7428
+  border-radius: 2px
+
+.btn__slider-arrow
+  position: absolute
+  top: 10px
+  transition: opacity .3s ease
+  z-index: 9
+  &:hover
+    opacity: .6
+
+.btn_slider-left-arrow
+  left: 10px
+
+.btn_slider-right-arrow
+  right: 10px
+  justify-content: flex-end
+  img
+    margin-right: 0
+
+.btn-notify
+  position: relative
+
+.btn-notify__have-notify
+  position: absolute
+  display: block
+  left: 2px
+  top: 4px
+  background-color: $r1
+  width: 5px
+  height: 5px
+
+.btn-mobile-nav-close
+  position: absolute
+  color: #0a1010
+  right: 20px
+  top: 20px
+  background-image: url("../images/icons/close.png")
+  background-size: contain
+  width: 20px
+  height: 20px
+
+//***********************************************************************************************
+//  select
+//***********************************************************************************************
+
+.select
+  position: relative
+  width: 100%
+  border-radius: 10px
+
+.select + .input__error-message, textarea + .input__error-message
+  &:before
+    display: none !important
+
+
+.select__toggle
+  display: flex
+  background-color: $bg1
+  border: none
+  border-radius: 10px
+  cursor: pointer
+  align-items: center
+  width: 100%
+  font-size: 1rem
+  padding: 0.375rem 0.75rem
+  line-height: 1
+  user-select: none
+  justify-content: space-between
+  color: white
+  font-family: $ff
+  height: 41px
+
+.select__toggle::after
+  content: ''
+  width: 31px
+  height: 25px
+  flex-shrink: 0
+  margin-left: 1rem
+  background-size: cover
+  background-image: url("../images/icons/bottom-arrow.png")
+
+.select__toggle:focus
+  outline: none
+
+.select_show .select__toggle::after
+  transform: rotate(180deg)
+
+.select__dropdown
+  display: none
+  position: absolute
+  top: 50px
+  left: 0
+  right: 0
+  max-height: 10rem
+  overflow-y: auto
+  border-radius: 0.3125rem
+  z-index: 10
+  background-color: $bg1
+  color: white
+  font-family: $ff
+  &:before
+    position: absolute
+    width: 14px
+    height: 5px
+    content: ''
+    top: -8px
+    right: 100px
+    background-image: url("../images/icons/drop-down-arrow.png")
+
+.select_show .select__dropdown
+  display: block
+
+.select_show .select__backdrop
+  display: block
+
+.select__options
+  margin: 0
+  padding: 0
+  list-style: none
+
+.select__option
+  padding: 0 20px
+  display: flex
+  align-items: center
+  height: 43px
+
+.select__option_selected
+  background-color: $bg1
+  color: white
+
+.select__option_selected::after
+  content: ''
+  width: 0.75rem
+  height: 0.75rem
+  background-size: cover
+  //background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="100" width="100" class="svg-inline--fa fa-check fa-w-16" data-icon="check" data-prefix="fas" aria-hidden="true"%3E%3Cpath d="M33.964 85.547l-32.5-32.251a4.935 4.935 0 010-7.017l7.071-7.017a5.027 5.027 0 017.071 0L37.5 60.987l46.894-46.534a5.028 5.028 0 017.07 0l7.072 7.017a4.935 4.935 0 010 7.017l-57.5 57.06a5.027 5.027 0 01-7.072 0z" fill="%230277bd"/%3E%3C/svg%3E')
+
+
+.select__option:hover
+  background-color: $bg1
+  cursor: pointer
+  transition: 0.2s background-color ease-in-out
+
+.select__form
+  .select__toggle, .select__dropdown, .select__option:hover
+    background-color: rgba(0, 0, 0, .6)
+
+//***********************************************************************************************
+//  modal
+//***********************************************************************************************
+
+.blocker
+  z-index: 12
+  background: rgba(0, 0 ,0, .3)
+
+.modal
+  position: fixed
+  display: none
+  width: 100%
+  height: 100vh
+  left: 0
+  top: 0
+  background: rgba(0, 0 ,0, .52)
+  z-index: 1000
+  animation-duration: .4s
+
+.modal__container
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background: rgba(0,0,0,0.5)
+  border-radius: 10px
+  padding: 40px 50px
+  width: 100%
+  box-shadow: 0 0 10px 0px rgba(255,255,255,0.1)
+  backdrop-filter: blur(5px)
+  .subtitle
+    margin: 0
+
+.close-modal
+  position: absolute
+  background-image: url("../images/icons/side-menu-close.png")
+  width: 16px
+  height: 16px
+  background-size: contain
+  top: 18px
+  right: 18px
+  transition: all .3s ease
+  &:hover
+    filter: saturate(2)
+
+.modal_container-sm
+  max-width: 420px
+
+.modal_container-lg
+  max-width: 480px
+
+.modal__card
+  background: rgba(0, 0 ,0, .52)
+  border-radius: 10px
+  padding: 40px 50px
+  width: 100%
+  margin: 40px auto
+
+.modal__card_restore
+  max-width: 420px
+
+.modal_confirm
+  color: white
+  font-size: 22px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.opened
+  display: block
+  opacity: 1
+
+@media (max-width: 700px)
+  .modal__container
+    width: 70%
+
+@media (max-width: 600px)
+  .modal__card
+    width: 70%
+    padding: 15px 20px
+
+@media (max-width: 400px)
+  .modal__card
+    width: calc(100% - 40px)
+//***********************************************************************************************
+//  input
+//***********************************************************************************************
+textarea
+  padding: 15px !important
+  //height: auto !important
+  resize: vertical
+  &::-webkit-scrollbar
+    width: 3px
+  /* Track */
+  &::-webkit-scrollbar-track
+    background: rgba(0, 0, 0, .45)
+  /* Handle */
+  &::-webkit-scrollbar-thumb
+    background: $y1
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover
+    background: #555
+
+.textarea_label
+  align-items: flex-start !important
+
+.input
+  border-radius: 10px
+  height: 39px
+  background-color: rgba(0, 0, 0, .45)
+  color: white
+  font-size: 15px
+  padding: 0 15px
+  border: 1px solid rgba(0, 0, 0, 0)
+  width: calc(100% - 32px)
+  font-family: $ffgl
+  transition: all .3s ease
+  &::placeholder
+    color: white
+    font-family: $ffgl
+    font-size: 15px
+  &:focus
+    outline: none !important
+    border: 1px solid $y1
+  &::-webkit-inner-spin-button
+    display: none
+
+textarea
+  height: auto !important
+
+.modal
+  .input, .select__toggle, .select__dropdown
+    background-color: rgba(55,55,55,0.5)
+
+.modal__container-cropper
+  padding: 50px 18px 20px 18px
+
+.input__file-wrapper
+  position: relative
+  width: 140px
+  height: 28px
+  cursor: pointer
+
+.input__file
+  position: absolute
+  width: 100%
+  height: 100%
+  cursor: pointer
+  opacity: 0
+  &::-webkit-file-upload-button
+    cursor: pointer
+
+.input__file-btn
+  width: 100%
+  height: 100%
+  background-repeat: no-repeat
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+
+.modal__cropper-title
+  position: absolute
+  left: 18px
+  top: 16px
+  font-size: 15px
+  padding: 0
+  font-family: 'Gotham-Pro-Light'
+
+.modal__cropper-control
+  display: flex
+  flex-direction: column
+  justify-content: center
+  > button
+    margin: 0 auto
+
+.btn__cropper-cancel
+  text-decoration: underline
+  color: #fff5b2
+
+
+.cropper__wrapper
+  background-color: #0a1010
+  border-radius: 10px
+  border: 1px solid white
+  min-height: 250px
+  opacity: .75
+  overflow: hidden
+
+.input__rub
+  color: $y1
+
+.input__wrapper
+  position: relative
+
+.input__error-message
+  display: none
+  position: absolute
+  bottom: -13px
+  font-size: 12px
+  color: #f51919
+  font-family: $ffgl
+  align-items: center
+  width: 100%
+  text-align: right
+
+.input__error
+  border: 1px solid #f51919
+  &:focus
+    outline: none !important
+    border: 1px solid #f51919
+
+.input__error + .input__error-message
+  display: block
+  &:before
+    content: ""
+    display: block
+    position: absolute
+    width: 21px
+    height: 21px
+    top: -32px
+    right: 15px
+    background-image: url("../images/icons/error.png")
+
+
+//***********************************************************************************************
+//  dropdown
+//***********************************************************************************************
+.notify
+  position: relative
+
+.dropdown-notify
+  position: absolute
+  width: 335px
+  z-index: 10
+  top: 76px
+  right: 51px
+
+.dropdown-notify__item
+  background-color: $bg1
+  border-radius: 10px
+  display: flex
+  align-items: center
+  padding: 15px
+  backdrop-filter: blur(4px)
+  margin-bottom: 5px
+  &:first-child
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      width: 14px
+      height: 6px
+      background-image: url("../images/icons/drop-down-arrow.png")
+      right: 30px
+      top: -6px
+  &:last-child
+    margin-bottom: 0
+
+.dropdown-notify__text
+  width: 80%
+  padding: 0 15px
+
+.dropdown-notify__desc
+  color: white
+  font-family: $ffgr
+  font-size: 12px
+
+.dropdown-notify__title
+  overflow: hidden
+  text-overflow: ellipsis
+
+.close-notify
+  position: absolute
+  right: 15px
+
+@media (max-width: 1000px)
+  .dropdown-notify
+    top: 70px
+    right: 44px
+
+@media (max-width: 400px)
+  .dropdown-notify
+    width: 90%
+    left: 50%
+    transform: translateX(-50%)
+
+  .dropdown-notify__item
+    background-color: rgba(38, 12, 0, .8)
+    &:first-child
+      &:before
+        display: none
+
+//***********************************************************************************************
+//  table
+//***********************************************************************************************
+.table__wrapper
+  overflow: auto
+
+.table
+  width: 100%
+  border-spacing: 0 10px
+  .place
+    margin: 0 auto
+  th, td
+    color: white
+    border: none
+    padding: 0 10px
+  td
+    font-family: $ffgr
+    text-align: center
+    &:first-child
+      border-bottom-left-radius: 10px
+      border-top-left-radius: 10px
+    &:last-child
+      border-bottom-right-radius: 10px
+      border-top-right-radius: 10px
+  tr
+    height: 43px
+    border-radius: 10px
+    padding: 10px 0
+    @include autoPlace()
+
+.table_bg1
+  tbody
+    td
+      background-color: $bg1
+
+.table_auto-place-number
+  tr
+    @include autoPlace()
+
+.table__loader
+  display: flex
+  flex-direction: column
+  color: white
+  min-height: 200px
+  align-items: center
+  font-size: 20px
+  justify-content: center
+
+@media (max-width: 400px)
+  .table
+    font-size: 12px
+
+//***********************************************************************************************
+//  pagination
+//***********************************************************************************************
+
+.pagination
+  display: flex
+  justify-content: center
+  border-radius: 10px
+
+.pagination__container
+  list-style-type: none
+  padding: 0
+  margin: 0
+  display: flex
+  align-content: center
+  box-sizing: border-box
+
+.pagination__page
+  font-size: 16px
+  padding: 2px 6px
+  display: flex
+  img
+    margin-right: 0
+    width: 12px
+  button
+    color: $y1
+    font-size: 22px
+    padding: 0
+    background-color: transparent
+    border: none
+    cursor: pointer
+    transition: all .3s ease
+    font-family: $ff
+    &:hover
+      opacity: .5
+
+
+.pagination__left-arrow, .pagination__right-arrow
+  display: flex
+  align-items: center
+  justify-content: center
+
+.pagination_page-active
+  color: white
+
+//***********************************************************************************************
+//  breadcrumb
+//***********************************************************************************************
+
+.breadcrumb
+  list-style-type: none
+  padding: 0
+  margin: 0
+  display: flex
+  position: absolute
+
+.breadcrumb__item
+  text-transform: capitalize
+  font-size: 12px
+  font-family: $ffgl
+  color: white
+  margin-right: 15px
+  position: relative
+  a
+    color: white
+  &:after
+    content: "/"
+    display: block
+    position: absolute
+    top: 0
+    right: -11px
+  &:last-child
+    margin-right: 0
+    &:after
+      display: none
+
+//***********************************************************************************************
+//  radio
+//***********************************************************************************************
+.radio
+  display: block
+  position: relative
+  cursor: pointer
+  font-size: 22px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  width: 48%
+
+.radio input
+  position: absolute
+  opacity: 0
+  cursor: pointer
+
+.radio:hover input ~ .logo-group__item
+  border: 1px solid $y1
+
+.radio input:checked ~ .logo-group__item
+  border: 1px solid $y2
+
+.radio_gold
+  width: 100%
+  margin-bottom: 5px
+  .logo-group__item
+    border: 1px solid #ffd200 !important
+  &:before
+    content: ""
+    position: absolute
+    background-image: url("../images/icons/crown.png")
+    width: 20px
+    height: 17px
+    top: 50%
+    left: 15px
+    transform: translateY(-50%)
+
+

@@ -1,0 +1,135 @@
+.inventory
+  grid-area: 1 / 1 / 1 / 13
+
+.inventory_table
+  td
+    padding: 8px
+
+.inventory__item
+  display: flex
+  align-items: center
+  justify-content: center
+
+.inventory__item-img
+  width: 61px
+  height: 61px
+  border: 1px solid #ff7428
+  -webkit-box-shadow:  0 0 15px 0 rgba(255, 255, 255, 0.25)
+  -moz-box-shadow:  0 0 15px 0 rgba(255, 255, 255, 0.25)
+  box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.25)
+  flex-shrink: 0
+  img
+    width: 100%
+
+.shadow
+  -webkit-box-shadow:  0 0 15px 0 rgba(255, 255, 255, 0.25)
+  -moz-box-shadow:  0 0 15px 0 rgba(255, 255, 255, 0.25)
+  box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.25)
+
+.inventory__item-name
+  font-size: 15px
+  width: 40%
+  text-align: left
+
+#transfer
+  color: white
+
+.transfer__text
+  color: white
+  font-family: $ffgl
+  font-size: 14px
+  text-align: center
+
+.transfer__current-item
+  display: grid
+  grid-template-columns: 60% 40%
+  font-family: $ffgl
+
+.transfer__count
+  text-align: center
+  display: flex
+  justify-content: flex-end
+
+.transfer__count-label
+  color: $y1
+  font-family: $ff
+
+.form-group_value-transfer
+  display: flex
+
+.change-count
+  width: 38px
+  flex-shrink: 0
+  text-align: center
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  justify-content: center
+  height: 41px
+  .btn
+    font-size: 22px
+    width: 20px
+    color: $y1
+    height: 20px
+    &:hover
+      color: $y2
+
+.change-count__btn-minus
+  &:before
+    content: ""
+    display: block
+    width: 14px
+    height: 2px
+    background-color: $y1
+    transition: all .3s ease
+  &:hover
+    &:before
+      background-color: $y2
+
+.change-count__wrapper
+  padding: 0 30px
+
+.transfer_input
+  text-align: center
+  background-color: rgba(0, 0, 0, .6) !important
+
+.transfer__item
+  justify-content: flex-start
+
+.inventory__wrapper
+  max-height: 600px
+  &::-webkit-scrollbar
+    width: 3px
+    height: 3px
+  /* Track */
+  &::-webkit-scrollbar-track
+    background: rgba(0, 0, 0, .45)
+  /* Handle */
+  &::-webkit-scrollbar-thumb
+    background: $y1
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover
+    background: #555
+
+@media (max-width: 500px)
+  .change-count__wrapper
+    padding: 0
+
+@media (max-width: 440px)
+  .change-count__wrapper
+    flex-direction: column
+    align-items: flex-start
+    .form-group__label
+      margin-bottom: 10px
+      width: 100%
+    .form-group__value
+      width: 100%
+  .transfer__current-item
+    display: block
+  .transfer__count
+    > div
+      display: flex
+      align-items: flex-end
+  .transfer__count-label
+    margin-right: 10px
+    margin-bottom: 0

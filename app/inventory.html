@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immortal.ws</title>
+    <link rel="stylesheet" href="css/app.min.css">
+    <script src="js/app.min.js"></script>
+</head>
+
+<body>
+<nav class="pc-navigation">
+    <div class="inner-top">
+        <div class="flex">
+            <div class="left-fx">
+                <a href="/" class="logo"></a>
+                <div class="status">
+                    <div class="ico on"></div>
+                    <div class="online">
+                        <span>онлайн</span>
+                        <p>3511</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-fx">
+                <ul class="menu">
+                    <li><a href="https://immortals.ws/">ГЛАВНАЯ</a></li>
+                    <li><a href="https://immortals.ws/about_game">ОБ ИГРЕ</a></li>
+                    <li class="children">
+                        <a href="#">СООБЩЕСТВА</a>
+                        <ul class="sub">
+                            <li><a href="https://vk.com/immortals_boi">VKONTAKTE</a></li>
+                            <li><a href="https://discord.com/invite/xF2E8rsvMh">DISCORD</a></li>
+                            <li><a href="https://immortals.ws/forum/index.php">ФОРУМ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">НОВОСТИ</a></li>
+                    <li><a href="https://immortals.ws/forum/index.php?forums/akcii-i-meroprijatija.7/">АКЦИИ И МЕРОПРИЯТИЯ</a></li>
+                </ul>
+                <a href="#" class="link-load">
+                    <img src="images/icons/download.png" alt="">
+                    <span>скачать клиент ( 1.39 GB )</span>
+                </a>
+            </div>
+            <div class="navi-button" onclick="toggleNavi();"><span></span></div>
+        </div>
+    </div>
+</nav>
+<div class="mobile-navigation">
+    <button class="btn btn-mobile-nav-close" onclick="toggleNavi();"></button>
+    <div class="inner">
+        <ul class="menu" data-menu-children="">
+            <li><a href="https://immortals.ws/">ГЛАВНАЯ</a></li>
+            <li><a href="https://immortals.ws/about_game">ОБ ИГРЕ</a></li>
+            <li class="children">
+                <a href="#">СООБЩЕСТВА</a>
+                <ul class="sub">
+                    <li><a href="https://vk.com/immortals_boi">VKONTAKTE</a></li>
+                    <li><a href="https://discord.com/invite/xF2E8rsvMh">DISCORD</a></li>
+                    <li><a href="https://immortals.ws/forum/index.php">ФОРУМ</a></li>
+                </ul>
+            </li>
+            <li><a href="https://immortals.ws//sign-up">СОЗДАТЬ АККАУНТ</a></li>
+            <li><a onclick="showModal('#modal-files');" class="active">СКАЧАТЬ ФАЙЛЫ</a></li>
+            <li><a href="https://immortals.ws//donations/arda.345">ПОПОЛНИТЬ СЧЕТ</a></li>
+            <li><a href="https://immortals.ws//rating/arda.345">РЕЙТИНГ ИГРОКОВ</a></li>
+            <li><a href="https://immortals.ws//sign-in">ЛИЧНЫЙ КАБИНЕТ</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">НОВОСТИ</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?forums/akcii-i-meroprijatija.7/">АКЦИИ И МЕРОПРИЯТИЯ</a></li>
+        </ul>
+        <ul class="links">
+            <li><a href="#"><span>скачать клиент ( 1.39 GB )</span></a></li>
+            <li><a href="#"><span>info@arcana.su</span></a></li>
+        </ul>
+    </div>
+</div>
+
+<main class="main">
+    <div class="main-grid">
+        <div class="main-grid__col">
+            <div class="menu">
+                <div class="menu__btn" onclick="toggleSideBar()">
+                    <div class="menu__btn-line"></div>
+                    <div class="menu__btn-line"></div>
+                    <div class="menu__btn-line"></div>
+                </div>
+            </div>
+            <div class="side-menu">
+                <button class="btn btn-close btn-close_side-menu" onclick="toggleSideBar()"></button>
+                <div class="side-menu__avatar">
+                    <div class="side-menu__img mb_1" style="background-image: url(images/avatar.png)" ></div>
+                    <div class="side-menu__login">
+                        Abelar
+                    </div>
+                    <div class="side-menu__balance">
+                        Баланс: 100 ZEN
+                    </div>
+                </div>
+                <ul class="side-menu__list">
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-1"></div>
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-2"></div>
+                            Аккаунты
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-3"></div>
+                            Пожертвования
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-4"></div>
+                            Бонусные коды
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-8"></div>
+                            Инвентарь
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-5"></div>
+                            Поддержка
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-6"></div>
+                            Настройки
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="side-menu__list-icon side-menu_icon-7"></div>
+                            Выход
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-grid__col">
+            <div class="page-title mb_2">
+                <img src="images/icons/inventory-page-title.png" alt="">
+                <div>
+                    инвентарь
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb__item">
+                            <a href="#">Главная</a>
+                        </li>
+                        <li class="breadcrumb__item">Инвентарь</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="index-grid">
+                    <div class="inventory">
+                        <h4 class="subtitle inventory-bg">
+                            Инвентарь
+                        </h4>
+                        <div class="table__wrapper inventory__wrapper">
+                            <table class="table table_bg1 inventory_table table_auto-place-number">
+                                <thead>
+                                <th>№:</th>
+                                <th>Предмет:</th>
+                                <th>Количество:</th>
+                                <th></th>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="place">
+                                            1
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inventory__item">
+                                            <div class="inventory__item-img mr_2">
+                                                <img src="images/item/item-1.jpg">
+                                            </div>
+                                            <div class="inventory__item-name">
+                                                Красный палач
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-orange-long" onclick="toggleModal('transfer')">
+                                            Отправить в игру
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="place">
+                                            1
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inventory__item">
+                                            <div class="inventory__item-img mr_2">
+                                                <img src="images/item/item-1.jpg">
+                                            </div>
+                                            <div class="inventory__item-name">
+                                                Красный сраный палач
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-orange-long" onclick="toggleModal('transfer')">
+                                            Отправить в игру
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="place">
+                                            1
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inventory__item">
+                                            <div class="inventory__item-img mr_2">
+                                                <img src="images/item/item-1.jpg">
+                                            </div>
+                                            <div class="inventory__item-name">
+                                                Красный сраный палач
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-orange-long" onclick="toggleModal('transfer')">
+                                            Отправить в игру
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="place">
+                                            1
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inventory__item">
+                                            <div class="inventory__item-img mr_2">
+                                                <img src="images/item/item-1.jpg">
+                                            </div>
+                                            <div class="inventory__item-name">
+                                                Красный сраный палач
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-orange-long" onclick="toggleModal('transfer')">
+                                            Отправить в игру
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="place">
+                                            1
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inventory__item">
+                                            <div class="inventory__item-img mr_2">
+                                                <img src="images/item/item-1.jpg">
+                                            </div>
+                                            <div class="inventory__item-name">
+                                                Красный сраный палач
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-orange-long" onclick="toggleModal('transfer')">
+                                            Отправить в игру
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="place">
+                                            1
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inventory__item">
+                                            <div class="inventory__item-img mr_2">
+                                                <img src="images/item/item-1.jpg">
+                                            </div>
+                                            <div class="inventory__item-name">
+                                                Красный сраный палач
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-orange-long" onclick="toggleModal('transfer')">
+                                            Отправить в игру
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="place">
+                                            1
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inventory__item">
+                                            <div class="inventory__item-img mr_2">
+                                                <img src="images/item/item-1.jpg">
+                                            </div>
+                                            <div class="inventory__item-name">
+                                                Красный сраный палач
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-orange-long" onclick="toggleModal('transfer')">
+                                            Отправить в игру
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="place">
+                                            1
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="inventory__item">
+                                            <div class="inventory__item-img mr_2">
+                                                <img src="images/item/item-1.jpg">
+                                            </div>
+                                            <div class="inventory__item-name">
+                                                Красный сраный палач
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-orange-long" onclick="toggleModal('transfer')">
+                                            Отправить в игру
+                                        </button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="table__loader hidden">
+                                Загрузка
+                                <div class="loader__wrapper">
+                                    <div class="loader"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination">
+                            <ul class="pagination__container">
+                                <li class="pagination__page"><a href="#" class="pagination__left-arrow"><img src="images/icons/left-arrow.png" alt=""></a></li>
+                                <li class="pagination__page"><a href="#" class="pagination_page-active">1</a></li>
+                                <li class="pagination__page"><a href="#">2</a></li>
+                                <li class="pagination__page"><a href="#">3</a></li>
+                                <li class="pagination__page"><a href="#">4</a></li>
+                                <li class="pagination__page"><a href="#" class="pagination__right-arrow"><img src="images/icons/right-arrow.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-grid__col">
+           <div class="flex notify__group">
+               <div class="notify">
+                   <button class="btn btn-notify">
+                       <span class="btn-notify__have-notify"></span>
+                       <img src="images/icons/notify.png" alt="">
+                   </button>
+               </div>
+               <button class="btn">
+                   <img src="images/icons/settings.png" alt="">
+               </button>
+           </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="menu-menyu-v-podvale-container">
+        <ul id="menu-menyu-v-podvale" class="footer__navi">
+            <li><a href="https://immortals.ws/forum/index.php?forums/novosti-i-objavlenija.6/">Новости</a></li>
+            <li><a href="https://immortals.ws/privacy_policy/">Политика конфиденциальности</a></li>
+            <li><a href="https://immortals.ws/terms_of_use/">Пользовательское соглашение</a></li>
+            <li><a href="https://immortals.ws/penalty/">Нарушения и наказания</a></li>
+            <li><a href="https://immortals.ws/forum/index.php">Форум</a></li>
+            <li><a href="https://immortals.ws/forum/index.php?threads/instrukcija-po-obrascheniju-v-texnicheskuju-podderzhku.23/">Тех. Поддержка</a></li>
+        </ul>
+    </div>
+    <div class="footer__text">
+        Immortals.ws - Классический игровой проект, знаменитой онлайн игры Battle of the
+    </div>
+</footer>
+
+<div id="transfer" class="modal animate__animated">
+    <div class="modal__container modal_container-lg">
+        <button class="btn close-modal" onclick="toggleModal('transfer')"></button>
+        <h4 class="subtitle transfer-bg">
+            Перевод предмета в игру
+        </h4>
+        <div class="transfer__text mt_1">
+            Укажите нужное количество предмета и подтвердите перевод
+        </div>
+       <form>
+        <div class="transfer__current-item mt_3 mb_2">
+            <div class="inventory__item transfer__item">
+                <div class="inventory__item-img mr_2">
+                    <img src="images/item/item-1.jpg">
+                </div>
+                <div class="inventory__item-name">
+                    Красный палач
+                </div>
+            </div>
+            <div class="transfer__count">
+                <div>
+                    <div class="transfer__count-label mb_1">
+                        Количество:
+                    </div>
+                    3
+                </div>
+            </div>
+        </div>
+        <div class="mb_2">
+            <div class="select select__form" id="select-1">
+                <button type="button" class="select__toggle" name="car" value="" data-select="toggle" data-index="-1">Список аккаунтов</button>
+                <div class="select__dropdown">
+                    <ul class="select__options">
+                        <li class="select__option" data-select="option" data-value="volkswagen" data-index="0">
+                            <div class="place place-1 mr_1">
+                            </div>
+                            Аккаунт
+                        </li>
+                        <li class="select__option" data-select="option" data-value="ford" data-index="1">
+                            <div class="place place-2 mr_1">
+                            </div>
+                            Аккаунт
+                        </li>
+                        <li class="select__option" data-select="option" data-value="toyota" data-index="2">
+                            <div class="place place-3 mr_1">
+                            </div>
+                            Аккаунт
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="form-group change-count__wrapper mb_2">
+            <div class="form-group__label">
+                Количество:
+            </div>
+            <div class="form-group__value form-group_value-transfer">
+                <input class="input transfer_input" value="1">
+                <div class="change-count">
+                    <button class="btn">
+                        +
+                    </button>
+                    <button class="btn change-count__btn-minus">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="char-list__control mt_2">
+            <button class="btn btn-red">
+                <img src="images/icons/swords.png" alt="">
+                Перевести в игру
+            </button>
+        </div>
+       </form>
+    </div>
+</div>
+
+<script>
+  const select1 = new CustomSelect('#select-1')
+</script>
+</body>
+</html>

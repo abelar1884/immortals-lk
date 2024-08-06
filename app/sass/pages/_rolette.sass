@@ -1,0 +1,138 @@
+.modal_container-rolette
+  max-width: 770px
+
+.rolette__balance
+  grid-area: 1/1/1/13
+  text-transform: uppercase
+  color: white
+  text-align: center
+  font-size: 22px
+
+.winnings__item
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    width: 25px
+
+.rolette__wrapper
+  position: relative
+  padding: 10px 80px
+  border-radius: 10px
+
+.rolette
+  position: relative
+  overflow-x: hidden
+  overflow-y: hidden
+
+.rolette__target
+  width: 142px
+  height: 142px
+  background-size: contain
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  background-image: url("../images/icons/target.png")
+  z-index: 100
+
+.rolette__window
+  overflow: hidden
+  position: relative
+  display: flex
+  justify-content: center
+  width: 2000px
+  right: -50%
+  transform: translateX(-50%)
+
+.rolette__item
+  text-align: center
+  color: white
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 160px
+  font-size: 15px
+  font-family: $ffgr
+  > img
+    width: 64px
+
+.presents
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+
+.present__item
+  text-align: center
+  color: white
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 64px
+  font-size: 15px
+  font-family: $ffgr
+  > img
+    width: 64px
+
+.rolette__partition
+  position: absolute
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    height: inherit
+    width: calc(50% - 71px)
+    left: 0
+    top: 0
+    border-top-left-radius: 10px
+    border-bottom-left-radius: 10px
+    background-color: $bg2
+    z-index: 100
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    height: inherit
+    width: calc(50% - 71px)
+    right: 0
+    top: 0
+    border-top-right-radius: 10px
+    border-bottom-right-radius: 10px
+    background-color: $bg2
+    z-index: 100
+
+.rolette__more
+  text-align: right
+  text-decoration: underline
+
+.rolette__left-arrow
+  position: absolute
+  z-index: 101
+  top: 50%
+  transform: translateY(-50%)
+  left: 20px
+  border: none
+  background-color: transparent
+  padding: 0
+  cursor: pointer
+  transition: .3s ease all
+  &:hover
+    filter: saturate(240%)
+
+.rolette__right-arrow
+  border: none
+  background-color: transparent
+  padding: 0
+  position: absolute
+  z-index: 101
+  top: 50%
+  transform: translateY(-50%)
+  right: 20px
+  cursor: pointer
+  transition: .3s ease all
+  &:hover
+    filter: saturate(240%)
